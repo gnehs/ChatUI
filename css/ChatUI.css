@@ -24,12 +24,12 @@ chat.cu {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 0 0 8px; }
-    chat.cu > message:not(:first-child) {
-      margin-top: 10px; }
+    margin: 10px 0 0 8px; }
+    chat.cu > message:first-child {
+      margin-top: 0px; }
     chat.cu > message.right {
       float: right;
-      margin: 0 8px 0 0; }
+      margin: 10px 8px 0 0; }
     chat.cu > message.img > .content > img {
       width: 450px; }
     chat.cu > message > .avatar {
@@ -40,7 +40,7 @@ chat.cu {
         border-radius: 5px; }
     chat.cu > message > .content {
       background-color: #fff;
-      width: 200px;
+      width: auto;
       max-width: 450px;
       border-radius: 5px;
       -webkit-box-orient: vertical;
@@ -64,5 +64,14 @@ chat.cu {
         chat.cu > message > .content > .meta > .item {
           display: inline-block;
           color: #a0accf; }
+
+/*  RWD  */
+@media (max-width: 768px) {
+  chat.cu > message.img > .content > img {
+    width: 450px;
+    max-width: 100%; }
+  chat.cu > message > .avatar > img {
+    width: 25px;
+    border-radius: 3px; } }
 
 /*# sourceMappingURL=ChatUI.css.map */

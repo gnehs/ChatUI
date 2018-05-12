@@ -21,12 +21,12 @@ chat.cu
         max-width: 430px
     &>message
         display: flex
-        margin: 0 0 0 8px
-        &:not(:first-child)
-            margin-top: 10px
+        margin: 10px 0 0 8px
+        &:first-child
+            margin-top: 0px
         &.right
             float: right
-            margin: 0 8px 0 0
+            margin: 10px 8px 0 0
         &.img
             &>.content
                 &>img
@@ -39,7 +39,7 @@ chat.cu
                 border-radius: 5px
         &>.content
             background-color: #fff
-            width: 200px
+            width: auto
             max-width: 450px
             border-radius: 5px
             flex-direction: column
@@ -56,4 +56,16 @@ chat.cu
                 &>.item
                     display: inline-block
                     color: #a0accf
-
+/*  RWD  */
+@media(max-width: 768px)
+    chat.cu
+        &>message
+            &.img
+                &>.content
+                    &>img
+                        width: 450px
+                        max-width: 100%
+            &>.avatar
+                &>img
+                    width: 25px
+                    border-radius: 3px
