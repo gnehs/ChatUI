@@ -1,4 +1,6 @@
+@charset "UTF-8";
 chat.cu {
+  font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif;
   width: 100%;
   background-color: #dedede;
   display: block;
@@ -21,31 +23,31 @@ chat.cu {
     width: auto;
     display: table;
     max-width: 430px; }
-  chat.cu > message {
+  chat.cu message {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin: 0 0 0 8px;
     padding-top: 8px; }
-    chat.cu > message:first-child {
+    chat.cu message:first-child {
       margin-top: 0px; }
-    chat.cu > message.right {
+    chat.cu message.right {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: reverse;
       -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse;
       margin: 0 8px 0 0; }
-    chat.cu > message.img > .content > img {
+    chat.cu message.img > .content > img {
       width: 450px; }
-    chat.cu > message > .avatar {
+    chat.cu message > .avatar {
       position: relative;
       margin: 0 5px 0 0; }
-      chat.cu > message > .avatar > img {
+      chat.cu message > .avatar > img {
         width: 40px;
         border-radius: 5px; }
-    chat.cu > message > .content {
+    chat.cu message > .content {
       background-color: #fff;
       width: auto;
       max-width: 450px;
@@ -61,25 +63,27 @@ chat.cu {
       flex: 1;
       position: relative;
       display: table; }
-      chat.cu > message > .content > .reply {
+      chat.cu message > .content > .reply {
         border-left: 2px solid #37a1de;
         margin-left: 8px;
         padding-left: 2px; }
-      chat.cu > message > .content > .meta {
+      chat.cu message > .content > .meta {
         text-align: right;
         padding: 0 8px 3px 8px; }
-        chat.cu > message > .content > .meta > .item {
+        chat.cu message > .content > .meta > .item {
           display: inline-block;
           color: #a0accf; }
 
 /*  RWD  */
 @media (max-width: 768px) {
-  chat.cu > message.img > .content {
-    max-width: 60vw; }
-    chat.cu > message.img > .content > img {
+  chat.cu message.img > .content {
+    max-width: 80vw; }
+    chat.cu message.img > .content > img {
       width: 450px;
       max-width: 100%; }
-  chat.cu > message > .avatar > img {
+  chat.cu message > .content {
+    max-width: 80vw; }
+  chat.cu message > .avatar > img {
     width: 25px;
     border-radius: 3px; } }
 
@@ -90,7 +94,7 @@ chat.cu[data-style="telegram"] {
   padding: 8px 0;
   background-attachment: fixed;
   background-size: cover; }
-  chat.cu[data-style="telegram"] > message.img.only > .content > .meta {
+  chat.cu[data-style="telegram"] message.img.only > .content > .meta {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -102,47 +106,47 @@ chat.cu[data-style="telegram"] {
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s; }
-    chat.cu[data-style="telegram"] > message.img.only > .content > .meta > .item {
+    chat.cu[data-style="telegram"] message.img.only > .content > .meta > .item {
       color: #FFF; }
-  chat.cu[data-style="telegram"] > message.img.only > .content:hover > .meta {
+  chat.cu[data-style="telegram"] message.img.only > .content:hover > .meta {
     opacity: 1; }
-  chat.cu[data-style="telegram"] > message.img.only > .content > img {
+  chat.cu[data-style="telegram"] message.img.only > .content > img {
     border-radius: 5px; }
-  chat.cu[data-style="telegram"] > message.img > .content > .author {
+  chat.cu[data-style="telegram"] message.img > .content > .author {
     padding-bottom: 5px; }
-  chat.cu[data-style="telegram"] > message.img > .content > .text {
+  chat.cu[data-style="telegram"] message.img > .content > .text {
     padding-top: 5px; }
-  chat.cu[data-style="telegram"] > message > .avatar > img {
+  chat.cu[data-style="telegram"] message > .avatar > img {
     border-radius: 100%; }
-  chat.cu[data-style="telegram"] > message > .content {
+  chat.cu[data-style="telegram"] message > .content {
     background-color: #fff;
     border-radius: 5px;
     -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15); }
-    chat.cu[data-style="telegram"] > message > .content > .author {
+    chat.cu[data-style="telegram"] message > .content > .author {
       padding-left: 12px;
       padding-top: 5px;
       padding-right: 12px; }
-    chat.cu[data-style="telegram"] > message > .content > .text {
+    chat.cu[data-style="telegram"] message > .content > .text {
       padding-left: 12px;
       padding-right: 12px; }
-    chat.cu[data-style="telegram"] > message > .content > .reply {
+    chat.cu[data-style="telegram"] message > .content > .reply {
       margin-left: 12px;
       padding-left: 5px;
       margin-top: 5px;
       margin-bottom: 5px;
       margin-right: 12px; }
-      chat.cu[data-style="telegram"] > message > .content > .reply > .author {
+      chat.cu[data-style="telegram"] message > .content > .reply > .author {
         color: #37a1de; }
-    chat.cu[data-style="telegram"] > message > .content > .meta > .item {
+    chat.cu[data-style="telegram"] message > .content > .meta > .item {
       color: #a0accf; }
-  chat.cu[data-style="telegram"] > message.right > .avatar {
+  chat.cu[data-style="telegram"] message.right > .avatar {
     display: none; }
-  chat.cu[data-style="telegram"] > message.right > .content {
+  chat.cu[data-style="telegram"] message.right > .content {
     background-color: #effdde; }
-    chat.cu[data-style="telegram"] > message.right > .content > .author {
+    chat.cu[data-style="telegram"] message.right > .content > .author {
       display: none; }
-    chat.cu[data-style="telegram"] > message.right > .content > .meta > .item {
+    chat.cu[data-style="telegram"] message.right > .content > .meta > .item {
       color: #78c67f; }
 
 /*# sourceMappingURL=ChatUI.css.map */
