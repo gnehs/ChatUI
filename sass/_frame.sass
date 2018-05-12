@@ -5,8 +5,10 @@ chat.cu
     padding: 8px 0
     background-attachment: fixed
     background-size: cover
+    clear: both
     & p
-        line-height: 1em
+        line-height: 1.18em
+        margin: 0
     &>*
         clear: both
     &>divider
@@ -21,12 +23,13 @@ chat.cu
         max-width: 430px
     &>message
         display: flex
-        margin: 10px 0 0 8px
+        margin: 0 0 0 8px
+        padding-top: 8px
         &:first-child
             margin-top: 0px
         &.right
-            float: right
-            margin: 10px 8px 0 0
+            flex-direction: row-reverse
+            margin: 0 8px 0 0
         &.img
             &>.content
                 &>img
@@ -47,7 +50,7 @@ chat.cu
             position: relative
             display: table
             &>.reply
-                border-left: 3px solid #000
+                border-left: 2px solid #37a1de
                 margin-left: 8px
                 padding-left: 2px
             &>.meta
@@ -62,6 +65,7 @@ chat.cu
         &>message
             &.img
                 &>.content
+                    max-width: 60vw
                     &>img
                         width: 450px
                         max-width: 100%

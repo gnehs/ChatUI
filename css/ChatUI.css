@@ -4,9 +4,11 @@ chat.cu {
   display: block;
   padding: 8px 0;
   background-attachment: fixed;
-  background-size: cover; }
+  background-size: cover;
+  clear: both; }
   chat.cu p {
-    line-height: 1em; }
+    line-height: 1.18em;
+    margin: 0; }
   chat.cu > * {
     clear: both; }
   chat.cu > divider {
@@ -24,12 +26,17 @@ chat.cu {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    margin: 10px 0 0 8px; }
+    margin: 0 0 0 8px;
+    padding-top: 8px; }
     chat.cu > message:first-child {
       margin-top: 0px; }
     chat.cu > message.right {
-      float: right;
-      margin: 10px 8px 0 0; }
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: reverse;
+      -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+      margin: 0 8px 0 0; }
     chat.cu > message.img > .content > img {
       width: 450px; }
     chat.cu > message > .avatar {
@@ -55,7 +62,7 @@ chat.cu {
       position: relative;
       display: table; }
       chat.cu > message > .content > .reply {
-        border-left: 3px solid #000;
+        border-left: 2px solid #37a1de;
         margin-left: 8px;
         padding-left: 2px; }
       chat.cu > message > .content > .meta {
@@ -67,11 +74,72 @@ chat.cu {
 
 /*  RWD  */
 @media (max-width: 768px) {
-  chat.cu > message.img > .content > img {
-    width: 450px;
-    max-width: 100%; }
+  chat.cu > message.img > .content {
+    max-width: 60vw; }
+    chat.cu > message.img > .content > img {
+      width: 450px;
+      max-width: 100%; }
   chat.cu > message > .avatar > img {
     width: 25px;
     border-radius: 3px; } }
+
+chat.cu[data-style="telegram"] {
+  width: 100%;
+  background-color: #dedede;
+  display: block;
+  padding: 8px 0;
+  background-attachment: fixed;
+  background-size: cover; }
+  chat.cu[data-style="telegram"] > message.img.only > .content > .meta {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 5px;
+    padding: 3px 6px;
+    border-radius: 2px;
+    opacity: 0; }
+    chat.cu[data-style="telegram"] > message.img.only > .content > .meta > .item {
+      color: #FFF; }
+  chat.cu[data-style="telegram"] > message.img.only > .content:hover > .meta {
+    opacity: 1; }
+  chat.cu[data-style="telegram"] > message.img.only > .content > img {
+    border-radius: 5px; }
+  chat.cu[data-style="telegram"] > message.img > .content > .author {
+    padding-bottom: 5px; }
+  chat.cu[data-style="telegram"] > message.img > .content > .text {
+    padding-top: 5px; }
+  chat.cu[data-style="telegram"] > message > .avatar > img {
+    border-radius: 100%; }
+  chat.cu[data-style="telegram"] > message > .content {
+    background-color: #fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15); }
+    chat.cu[data-style="telegram"] > message > .content > .author {
+      padding-left: 12px;
+      padding-top: 5px;
+      padding-right: 12px; }
+    chat.cu[data-style="telegram"] > message > .content > .text {
+      padding-left: 12px;
+      padding-right: 12px; }
+    chat.cu[data-style="telegram"] > message > .content > .reply {
+      margin-left: 12px;
+      padding-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 12px; }
+      chat.cu[data-style="telegram"] > message > .content > .reply > .author {
+        color: #37a1de; }
+    chat.cu[data-style="telegram"] > message > .content > .meta > .item {
+      color: #a0accf; }
+  chat.cu[data-style="telegram"] > message.right > .avatar {
+    display: none; }
+  chat.cu[data-style="telegram"] > message.right > .content {
+    background-color: #effdde; }
+    chat.cu[data-style="telegram"] > message.right > .content > .author {
+      display: none; }
+    chat.cu[data-style="telegram"] > message.right > .content > .meta > .item {
+      color: #78c67f; }
 
 /*# sourceMappingURL=ChatUI.css.map */
