@@ -266,7 +266,7 @@ chat.cu[data-style="messenger"] message {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    max-width: 450px; }
+    max-width: 80vw; }
   chat.cu[data-style="messenger"] message > .content > img, chat.cu[data-style="messenger"] message > .content > iframe, chat.cu[data-style="messenger"] message > .content > video {
     border-radius: 1.219em;
     border-bottom-left-radius: 0.25em; }
@@ -284,7 +284,7 @@ chat.cu[data-style="messenger"] message {
     overflow: hidden;
     padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > img {
-      max-width: 450px;
+      max-width: 80vw;
       padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > .title, chat.cu[data-style="messenger"] message > .content > .perview > .header {
       font-weight: bold; }
