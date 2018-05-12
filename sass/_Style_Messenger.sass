@@ -22,12 +22,33 @@ chat.cu[data-style="messenger"]
                 background: rgb(241, 240, 240)
                 border-radius: 1.219em
                 padding: 0.375em 0.844em
+                width: max-content
+                max-width: 450px
             &>img,&>iframe,&>video
                 border-radius: 1.219em
                 border-bottom-left-radius: 0.25em
             &>img+.text,&>iframe+.text,&>video+.text
                 margin-top: 0.2em
                 border-top-left-radius: 0.25em
+            &.perview
+                background: #000
+            &>.perview
+                margin-top: 0.2em
+                border: 1px solid #eee
+                border-radius: 1.219em
+                border-top-left-radius: .25em
+                border-top-right-radius: 1.219em
+                overflow: hidden
+                padding-bottom: .4em
+                &>img 
+                    padding-bottom: .4em
+                &>.title,&>.header
+                    font-weight: bold
+                &>.title,&>.header,&>.description,&>.domain
+                    padding-left:  .4em
+                    line-height: 1.22em
+                &>.domain
+                    color: rgba(0, 0, 0, 0.4)
         &.only
             &>.content
                 &>img,iframe,video
@@ -38,11 +59,13 @@ chat.cu[data-style="messenger"]
             &>.content
                 &>.author
                     display: none
+                &>.text
+                    margin: 0 0 0 auto
     & message-group
         & message
             margin-top: 0.2em
             &>.content
-                &>.text,&>img,&>iframe,&>video
+                &>.text,&>img,&>iframe,&>video,&>.perview
                     border-bottom-left-radius: 0.25em !important
                     border-top-left-radius: 0.25em !important
             &:nth-child(n+2)
@@ -51,19 +74,55 @@ chat.cu[data-style="messenger"]
                 &>.content
                     &>.author
                         display: none
-            &:first-child:not(.img):not(.iframe):not(.video)
+            &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
                 &>.content
                     &>.text
                         border-top-left-radius: 1.219em !important
-            &:last-child:not(.img):not(.iframe):not(.video)
+            &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
                 &>.content
                     &>.text
                         border-bottom-left-radius: 1.219em !important
-            &.img:first-child,&.iframe:first-child,&.video:first-child
+            &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
                 &>.content
-                    &>img,&>iframe,&>video
+                    &>img,&>iframe,&>video,&>.perview
                         border-top-left-radius: 1.219em !important
-            &.img:last-child,&.iframe:last-child,&.video:last-child
+            &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
                 &>.content
-                    &>img,&>iframe,&>video
+                    &>img,&>iframe,&>video,&>.perview
                         border-bottom-left-radius: 1.219em !important
+            
+            &.right
+                &>.content
+                    &>.text,&>img,&>iframe,&>video
+                        border-bottom-right-radius: 0.25em !important
+                        border-top-right-radius: 0.25em !important
+                        border-top-left-radius: 1.219em !important
+                        border-bottom-left-radius: 1.219em !important
+                &:nth-child(n+2)
+                    &>.avatar
+                        opacity: 0
+                    &>.content
+                        &>.author
+                            display: none
+                &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
+                    &>.content
+                        &>.text
+                            border-top-right-radius: 1.219em !important
+                            border-top-left-radius: 1.219em !important
+                &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
+                    &>.content
+                        &>.text
+                            border-top-left-radius: 1.219em !important
+                            border-bottom-right-radius: 1.219em !important
+                            border-bottom-left-radius: 1.219em !important
+                &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
+                    &>.content
+                        &>img,&>iframe,&>video,&>.perview
+                            border-bottom-left-radius: 1.219em !important
+                            border-top-right-radius: 1.219em !important
+                &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
+                    &>.content
+                        &>img,&>iframe,&>video,&>.perview
+                            border-top-left-radius: 1.219em !important
+                            border-bottom-right-radius: 1.219em !important
+                            border-bottom-left-radius: 1.219em !important

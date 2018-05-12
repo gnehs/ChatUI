@@ -262,36 +262,84 @@ chat.cu[data-style="messenger"] message {
   chat.cu[data-style="messenger"] message > .content > .text {
     background: #f1f0f0;
     border-radius: 1.219em;
-    padding: 0.375em 0.844em; }
+    padding: 0.375em 0.844em;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    max-width: 450px; }
   chat.cu[data-style="messenger"] message > .content > img, chat.cu[data-style="messenger"] message > .content > iframe, chat.cu[data-style="messenger"] message > .content > video {
     border-radius: 1.219em;
     border-bottom-left-radius: 0.25em; }
   chat.cu[data-style="messenger"] message > .content > img + .text, chat.cu[data-style="messenger"] message > .content > iframe + .text, chat.cu[data-style="messenger"] message > .content > video + .text {
     margin-top: 0.2em;
     border-top-left-radius: 0.25em; }
+  chat.cu[data-style="messenger"] message > .content.perview {
+    background: #000; }
+  chat.cu[data-style="messenger"] message > .content > .perview {
+    margin-top: 0.2em;
+    border: 1px solid #eee;
+    border-radius: 1.219em;
+    border-top-left-radius: .25em;
+    border-top-right-radius: 1.219em;
+    overflow: hidden;
+    padding-bottom: .4em; }
+    chat.cu[data-style="messenger"] message > .content > .perview > img {
+      padding-bottom: .4em; }
+    chat.cu[data-style="messenger"] message > .content > .perview > .title, chat.cu[data-style="messenger"] message > .content > .perview > .header {
+      font-weight: bold; }
+    chat.cu[data-style="messenger"] message > .content > .perview > .title, chat.cu[data-style="messenger"] message > .content > .perview > .header, chat.cu[data-style="messenger"] message > .content > .perview > .description, chat.cu[data-style="messenger"] message > .content > .perview > .domain {
+      padding-left: .4em;
+      line-height: 1.22em; }
+    chat.cu[data-style="messenger"] message > .content > .perview > .domain {
+      color: rgba(0, 0, 0, 0.4); }
   chat.cu[data-style="messenger"] message.only > .content > img, chat.cu[data-style="messenger"] message.only > .content iframe, chat.cu[data-style="messenger"] message.only > .content video {
     border-radius: 1.219em; }
   chat.cu[data-style="messenger"] message.right > .avatar {
     display: none; }
   chat.cu[data-style="messenger"] message.right > .content > .author {
     display: none; }
+  chat.cu[data-style="messenger"] message.right > .content > .text {
+    margin: 0 0 0 auto; }
 
 chat.cu[data-style="messenger"] message-group message {
   margin-top: 0.2em; }
-  chat.cu[data-style="messenger"] message-group message > .content > .text, chat.cu[data-style="messenger"] message-group message > .content > img, chat.cu[data-style="messenger"] message-group message > .content > iframe, chat.cu[data-style="messenger"] message-group message > .content > video {
+  chat.cu[data-style="messenger"] message-group message > .content > .text, chat.cu[data-style="messenger"] message-group message > .content > img, chat.cu[data-style="messenger"] message-group message > .content > iframe, chat.cu[data-style="messenger"] message-group message > .content > video, chat.cu[data-style="messenger"] message-group message > .content > .perview {
     border-bottom-left-radius: 0.25em !important;
     border-top-left-radius: 0.25em !important; }
   chat.cu[data-style="messenger"] message-group message:nth-child(n+2) > .avatar {
     opacity: 0; }
   chat.cu[data-style="messenger"] message-group message:nth-child(n+2) > .content > .author {
     display: none; }
-  chat.cu[data-style="messenger"] message-group message:first-child:not(.img):not(.iframe):not(.video) > .content > .text {
+  chat.cu[data-style="messenger"] message-group message:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
     border-top-left-radius: 1.219em !important; }
-  chat.cu[data-style="messenger"] message-group message:last-child:not(.img):not(.iframe):not(.video) > .content > .text {
+  chat.cu[data-style="messenger"] message-group message:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
     border-bottom-left-radius: 1.219em !important; }
-  chat.cu[data-style="messenger"] message-group message.img:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.img:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.img:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > video {
+  chat.cu[data-style="messenger"] message-group message.img:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.img:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.img:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.img:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.iframe:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.video:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.perview:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.perview:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.perview:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.perview:first-child > .content > .perview {
     border-top-left-radius: 1.219em !important; }
-  chat.cu[data-style="messenger"] message-group message.img:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.img:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.img:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > video {
+  chat.cu[data-style="messenger"] message-group message.img:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.img:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.img:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.img:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.iframe:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.video:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.perview:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.perview:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.perview:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.perview:last-child > .content > .perview {
+    border-bottom-left-radius: 1.219em !important; }
+  chat.cu[data-style="messenger"] message-group message.right > .content > .text, chat.cu[data-style="messenger"] message-group message.right > .content > img, chat.cu[data-style="messenger"] message-group message.right > .content > iframe, chat.cu[data-style="messenger"] message-group message.right > .content > video {
+    border-bottom-right-radius: 0.25em !important;
+    border-top-right-radius: 0.25em !important;
+    border-top-left-radius: 1.219em !important;
+    border-bottom-left-radius: 1.219em !important; }
+  chat.cu[data-style="messenger"] message-group message.right:nth-child(n+2) > .avatar {
+    opacity: 0; }
+  chat.cu[data-style="messenger"] message-group message.right:nth-child(n+2) > .content > .author {
+    display: none; }
+  chat.cu[data-style="messenger"] message-group message.right:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+    border-top-right-radius: 1.219em !important;
+    border-top-left-radius: 1.219em !important; }
+  chat.cu[data-style="messenger"] message-group message.right:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+    border-top-left-radius: 1.219em !important;
+    border-bottom-right-radius: 1.219em !important;
+    border-bottom-left-radius: 1.219em !important; }
+  chat.cu[data-style="messenger"] message-group message.right.img:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.img:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.img:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.img:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.iframe:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.iframe:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.iframe:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.iframe:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.video:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.video:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.video:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.video:first-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.perview:first-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.perview:first-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.perview:first-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.perview:first-child > .content > .perview {
+    border-bottom-left-radius: 1.219em !important;
+    border-top-right-radius: 1.219em !important; }
+  chat.cu[data-style="messenger"] message-group message.right.img:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.img:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.img:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.img:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.iframe:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.iframe:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.iframe:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.iframe:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.video:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.video:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.video:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.video:last-child > .content > .perview, chat.cu[data-style="messenger"] message-group message.right.perview:last-child > .content > img, chat.cu[data-style="messenger"] message-group message.right.perview:last-child > .content > iframe, chat.cu[data-style="messenger"] message-group message.right.perview:last-child > .content > video, chat.cu[data-style="messenger"] message-group message.right.perview:last-child > .content > .perview {
+    border-top-left-radius: 1.219em !important;
+    border-bottom-right-radius: 1.219em !important;
     border-bottom-left-radius: 1.219em !important; }
 
 /*# sourceMappingURL=ChatUI.css.map */

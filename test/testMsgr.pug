@@ -85,6 +85,21 @@ html
                         video(src='http://html5demos.com/assets/dizzy.mp4',controls)
                         .meta
                             .item 15:38
+                // 連結預覽
+                message.text.perview
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        .author 熊貓貓
+                        .text
+                            a(href='https://gnehs.net/') https://gnehs.net/
+                        .perview
+                            img(src='https://avatars0.githubusercontent.com/u/16719720')
+                            .title 棒棒勝
+                            .description 住在某鬼島ㄉ高中生
+                            .domain gnehs.net
+                        .meta
+                            .item 16:05
             // 嵌入影片
             message.iframe
                 .avatar
@@ -95,38 +110,40 @@ html
                     .text 這是偶演ㄉ動畫
                     .meta
                         .item 15:38
-            // 只發一張圖
-            message.img.only.right.read
-                .avatar
-                    img(src='https://i.imgur.com/6oTWGHZ.png')
-                .content
-                    img(src='https://i.imgur.com/kJiZpmg.png')
-                    .meta
-                        .item 15:42
-            // 右側短文字訊息
-            message.text.right
-                .avatar
-                    img(src='https://i.imgur.com/6oTWGHZ.png')
-                .content
-                    .author 熊貓貓
-                    .text
-                        p 會考倒數
-                        p 距離會考還剩下 6 天喔
-                    .meta
-                        .item 16:02
-            // 連結預覽
-            message.text.right
-                .avatar
-                    img(src='https://i.imgur.com/6oTWGHZ.png')
-                .content
-                    .author 熊貓貓
-                    .text
-                        a(href='https://gnehs.net/') https://gnehs.net/
-                    .perview
-                        .title 棒棒勝
-                        .header 可愛ㄉ棒棒勝喔
-                        .description 住在某鬼島ㄉ高中生
-                        img(src='https://avatars0.githubusercontent.com/u/16719720')
-                    .meta
-                        .item 16:05
+            // 訊息群組
+            message-group
+                // 只發一張圖
+                message.img.only.right.read
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        img(src='https://i.imgur.com/kJiZpmg.png')
+                        .meta
+                            .item 15:42
+                // 右側短文字訊息
+                message.text.right
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        .author 熊貓貓
+                        .text
+                            p 會考倒數
+                            p 距離會考還剩下 6 天喔
+                        .meta
+                            .item 16:02
+                // 連結預覽
+                message.text.right.perview
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        .author 熊貓貓
+                        .text
+                            a(href='https://gnehs.net/') https://gnehs.net/
+                        .perview
+                            img(src='https://avatars0.githubusercontent.com/u/16719720')
+                            .title 棒棒勝
+                            .description 住在某鬼島ㄉ高中生
+                            .domain gnehs.net
+                        .meta
+                            .item 16:05
 
