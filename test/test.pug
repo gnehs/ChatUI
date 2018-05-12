@@ -68,24 +68,25 @@ html
                         .item read
             //- 分隔線
             divider 11 May
-            //- 左側文字訊息
-            message.img 
-                .avatar
-                    img(src='https://i.imgur.com/6oTWGHZ.png')
-                .content
-                    .author 熊貓貓
-                    img(src='https://i.imgur.com/ENHhwcQ.jpg')
-                    .text 這是偶去美國拍的照片
-                    .meta
-                        .item 15:30
-            //- 只發一個影片
-            message.video.only
-                .avatar
-                    img(src='https://i.imgur.com/6oTWGHZ.png')
-                .content
-                    video(src='http://html5demos.com/assets/dizzy.mp4',controls)
-                    .meta
-                        .item 15:38
+            message-group
+                //- 左側文字訊息
+                message.img 
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        .author 熊貓貓
+                        img(src='https://i.imgur.com/ENHhwcQ.jpg')
+                        .text 這是偶去美國拍的照片
+                        .meta
+                            .item 15:30
+                //- 只發一個影片
+                message.video.only
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        video(src='http://html5demos.com/assets/dizzy.mp4',controls)
+                        .meta
+                            .item 15:38
             //- 嵌入影片
             message.iframe
                 .avatar

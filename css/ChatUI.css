@@ -105,7 +105,7 @@ chat.cu[data-style="telegram"] {
     -webkit-transition: 0.1s;
     -o-transition: 0.1s;
     transition: 0.1s; }
-    chat.cu[data-style="telegram"] message.only > .content > .meta > .item {
+    chat.cu[data-style="telegram"] message.only > .content > .meta > .item.item {
       color: #FFF; }
   chat.cu[data-style="telegram"] message.only > .content:hover > .meta {
     opacity: 1; }
@@ -138,7 +138,7 @@ chat.cu[data-style="telegram"] {
     chat.cu[data-style="telegram"] message > .content > .meta {
       margin-top: -.8em; }
       chat.cu[data-style="telegram"] message > .content > .meta > .item {
-        color: #a0accf; }
+        color: #d1d1d1; }
   chat.cu[data-style="telegram"] message.right > .avatar {
     display: none; }
   chat.cu[data-style="telegram"] message.right > .content {
@@ -147,5 +147,9 @@ chat.cu[data-style="telegram"] {
       display: none; }
     chat.cu[data-style="telegram"] message.right > .content > .meta > .item {
       color: #78c67f; }
+  chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .avatar {
+    opacity: 0; }
+  chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .content > .author {
+    display: none; }
 
 /*# sourceMappingURL=ChatUI.css.map */

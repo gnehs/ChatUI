@@ -18,7 +18,7 @@ chat.cu[data-style="telegram"]
                     border-radius: 5px
                     opacity: 0
                     transition: 0.1s
-                    &>.item
+                    &>.item.item
                         color: #FFF
                 &:hover
                     &>.meta
@@ -54,7 +54,7 @@ chat.cu[data-style="telegram"]
             &>.meta
                 margin-top: -.8em
                 &>.item
-                    color: #a0accf
+                    color: #d1d1d1
         &.right
             &>.avatar
                 display: none
@@ -66,3 +66,13 @@ chat.cu[data-style="telegram"]
                 &>.meta
                     &>.item
                         color: #78c67f
+    & message-group
+        & message
+            &:nth-child(n+2)
+                &>.avatar
+                    opacity: 0
+                &>.content
+                    &>.author
+                        display: none
+
+
