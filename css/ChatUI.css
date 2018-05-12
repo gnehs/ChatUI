@@ -160,6 +160,19 @@ chat.cu[data-style="telegram"] {
       margin: 0 0.750em 5px 0.750em; }
       chat.cu[data-style="telegram"] message > .content > .reply > .author {
         color: #37a1de; }
+    chat.cu[data-style="telegram"] message > .content > .perview {
+      border-left: 0.125em solid #37a1de;
+      padding-left: 0.625em;
+      margin: 0 0.750em 5px 0.750em;
+      line-height: 1.22em; }
+      chat.cu[data-style="telegram"] message > .content > .perview > .title {
+        color: #37a1de;
+        font-weight: bold; }
+      chat.cu[data-style="telegram"] message > .content > .perview > .header {
+        font-weight: bold; }
+      chat.cu[data-style="telegram"] message > .content > .perview > img {
+        width: 100%;
+        margin-top: .2em; }
     chat.cu[data-style="telegram"] message > .content > .author + .reply {
       margin: 0.625em 0.750em 0.313em 0.750em; }
     chat.cu[data-style="telegram"] message > .content > .meta {
@@ -169,6 +182,8 @@ chat.cu[data-style="telegram"] {
       chat.cu[data-style="telegram"] message > .content > .meta > .item {
         font-size: .9em;
         color: #d1d1d1; }
+    chat.cu[data-style="telegram"] message > .content > .perview + .meta {
+      margin-top: .2em; }
   chat.cu[data-style="telegram"] message.right > .avatar {
     display: none; }
   chat.cu[data-style="telegram"] message.right > .content {
@@ -179,6 +194,14 @@ chat.cu[data-style="telegram"] {
       padding-right: 4.5em; }
     chat.cu[data-style="telegram"] message.right > .content > .meta > .item {
       color: #78c67f; }
+    chat.cu[data-style="telegram"] message.right > .content > .reply {
+      border-left: 0.125em solid #5dc452; }
+      chat.cu[data-style="telegram"] message.right > .content > .reply > .author {
+        color: #5dc452; }
+    chat.cu[data-style="telegram"] message.right > .content > .perview {
+      border-left: 0.125em solid #5dc452; }
+      chat.cu[data-style="telegram"] message.right > .content > .perview > .title {
+        color: #5dc452; }
   chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .avatar {
     opacity: 0; }
   chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .content > .author {

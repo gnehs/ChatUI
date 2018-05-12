@@ -7,11 +7,11 @@ html
         title Test Page
     body
         chat.cu(data-style='telegram',style='background-image:url(https://i.snag.gy/wLROud.jpg)')
-            //- 讀取器
+            // 讀取器
             loading.active
-            //- 分隔線
+            // 分隔線
             divider 10 May
-            //- 左側短文字訊息
+            // 左側短文字訊息
             message.text
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -21,7 +21,7 @@ html
                         p 這是三小
                     .meta
                         .item 13:20
-            //- 右側短文字訊息
+            // 右側短文字訊息
             message.text.right.read
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -31,7 +31,7 @@ html
                         p 這是關東煮喔 ❤️
                     .meta
                         .item 13:20
-            //- 左側回覆文字訊息
+            // 左側回覆文字訊息
             message.text
                 .avatar
                     img(src='https://i.imgur.com/MTDS9BN.png')
@@ -47,7 +47,7 @@ html
                         p 然後始春還是延其月
                     .meta
                         .item 13:23
-            //- 左側長文字訊息
+            // 左側長文字訊息
             message.text
                 .avatar
                     img(src='https://i.imgur.com/ncjaFUd.png')
@@ -61,7 +61,7 @@ html
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     .meta
                         .item 13:23
-            //- 右側圖片訊息
+            // 右側圖片訊息
             message.img.right.read
                 .content
                     .reply
@@ -72,10 +72,11 @@ html
                     .text 這是偶去美國拍的照片
                     .meta
                         .item 13:53
-            //- 分隔線
+            // 分隔線
             divider 11 May
+            // 訊息群組
             message-group
-                //- 左側文字訊息
+                // 左側文字訊息
                 message.img
                     .avatar
                         img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -85,7 +86,7 @@ html
                         .text 這是偶去美國拍的照片
                         .meta
                             .item 15:30
-                //- 只發一個影片
+                // 只發一個影片
                 message.video.only
                     .avatar
                         img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -93,7 +94,7 @@ html
                         video(src='http://html5demos.com/assets/dizzy.mp4',controls)
                         .meta
                             .item 15:38
-            //- 嵌入影片
+            // 嵌入影片
             message.iframe
                 .avatar
                     img(src='https://i.imgur.com/nMMGqle.png')
@@ -103,7 +104,7 @@ html
                     .text 這是偶演ㄉ動畫
                     .meta
                         .item 15:38
-            //- 只發一張圖
+            // 只發一張圖
             message.img.only.right.read
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -111,7 +112,7 @@ html
                     img(src='https://i.imgur.com/kJiZpmg.png')
                     .meta
                         .item 15:38
-            //- 右側短文字訊息
+            // 右側短文字訊息
             message.text.right
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
@@ -120,6 +121,22 @@ html
                     .text
                         p 會考倒數
                         p 距離會考還剩下 6 天喔
+                    .meta
+                        .item 13:20
+            // 連結預覽
+            message.text.right
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        p 會考倒數
+                        p 距離會考還剩下 6 天喔
+                    .perview
+                        .title Facebook
+                        .header Facebook – log in or sign up
+                        .description Create an account or log in to Facebook. Connect with friends, family and other people you know. Share photos and videos, send messages and get updates.
+                        img(src='https://i.imgur.com/jEuEcz3.png')
                     .meta
                         .item 13:20
 
