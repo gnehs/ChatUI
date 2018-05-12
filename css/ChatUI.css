@@ -93,6 +93,12 @@ chat.cu[data-style="telegram"] {
   padding: 0.500em 0;
   background-attachment: fixed;
   background-size: cover; }
+  chat.cu[data-style="telegram"] message.right:not(.read) > .content > .meta > .item:last-child:after {
+    font-family: 'icomoon' !important;
+    content: " \e903"; }
+  chat.cu[data-style="telegram"] message.right.read > .content > .meta > .item:last-child:after {
+    font-family: 'icomoon' !important;
+    content: " \e902"; }
   chat.cu[data-style="telegram"] message.only > .content {
     padding-top: 0; }
     chat.cu[data-style="telegram"] message.only > .content > .meta {
@@ -141,6 +147,7 @@ chat.cu[data-style="telegram"] {
     chat.cu[data-style="telegram"] message > .content > .author + .reply {
       margin: 0.625em 0.750em 0.313em 0.750em; }
     chat.cu[data-style="telegram"] message > .content > .meta {
+      float: right;
       margin-top: -.9em;
       margin-bottom: .2em; }
       chat.cu[data-style="telegram"] message > .content > .meta > .item {
@@ -152,11 +159,45 @@ chat.cu[data-style="telegram"] {
     background-color: #effdde; }
     chat.cu[data-style="telegram"] message.right > .content > .author {
       display: none; }
+    chat.cu[data-style="telegram"] message.right > .content > .text {
+      padding-right: 4.5em; }
     chat.cu[data-style="telegram"] message.right > .content > .meta > .item {
       color: #78c67f; }
   chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .avatar {
     opacity: 0; }
   chat.cu[data-style="telegram"] message-group message:nth-child(n+2) > .content > .author {
     display: none; }
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?psgnhf");
+  src: url("../fonts/icomoon.eot?psgnhf#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?psgnhf") format("truetype"), url("../fonts/icomoon.woff?psgnhf") format("woff"), url("../fonts/icomoon.svg?psgnhf#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.icon-readRound:before {
+  content: "\1f31a"; }
+
+.icon-sentRound:before {
+  content: "\e901"; }
+
+.icon-read:before {
+  content: "\e902"; }
+
+.icon-sent:before {
+  content: "\e903"; }
 
 /*# sourceMappingURL=ChatUI.css.map */

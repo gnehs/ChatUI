@@ -22,7 +22,7 @@ html
                     .meta
                         .item 13:20
             //- 右側短文字訊息
-            message.text.right
+            message.text.right.read
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
                 .content
@@ -62,7 +62,7 @@ html
                     .meta
                         .item 13:23
             //- 右側圖片訊息
-            message.img.right
+            message.img.right.read
                 .content
                     .reply
                         .author 熊貓貓
@@ -72,7 +72,6 @@ html
                     .text 這是偶去美國拍的照片
                     .meta
                         .item 13:53
-                        .item read
             //- 分隔線
             divider 11 May
             message-group
@@ -105,11 +104,22 @@ html
                     .meta
                         .item 15:38
             //- 只發一張圖
-            message.img.only.right
+            message.img.only.right.read
                 .avatar
                     img(src='https://i.imgur.com/6oTWGHZ.png')
                 .content
                     img(src='https://i.imgur.com/kJiZpmg.png')
                     .meta
                         .item 15:38
+            //- 右側短文字訊息
+            message.text.right
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        p 會考倒數
+                        p 距離會考還剩下 6 天喔
+                    .meta
+                        .item 13:20
 

@@ -6,6 +6,15 @@ chat.cu[data-style="telegram"]
     background-attachment: fixed
     background-size: cover
     & message
+        &.right:not(.read)
+            &>.content>.meta>.item:last-child:after
+                font-family: 'icomoon' !important
+                content: " \e903"
+        &.right.read
+            &>.content>.meta>.item:last-child:after
+                font-family: 'icomoon' !important
+                content: " \e902"
+
         &.only
             &>.content
                 padding-top: 0
@@ -56,6 +65,7 @@ chat.cu[data-style="telegram"]
             &>.author+.reply
                 margin: 0.625em 0.750em 0.313em 0.750em
             &>.meta
+                float: right
                 margin-top: -.9em
                 margin-bottom: .2em
                 &>.item
@@ -68,7 +78,8 @@ chat.cu[data-style="telegram"]
                 background-color: #effdde
                 &>.author
                     display: none
-                
+                &>.text
+                    padding-right: 4.5em
                 &>.meta
                     &>.item
                         color: #78c67f
