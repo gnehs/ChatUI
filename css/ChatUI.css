@@ -284,6 +284,7 @@ chat.cu[data-style="messenger"] message {
     overflow: hidden;
     padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > img {
+      max-width: 450px;
       padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > .title, chat.cu[data-style="messenger"] message > .content > .perview > .header {
       font-weight: bold; }
