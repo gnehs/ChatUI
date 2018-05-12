@@ -25,6 +25,8 @@ chat.cu {
     display: -ms-flexbox;
     display: flex;
     margin: 0 0 0 8px; }
+    chat.cu > message:not(:first-child) {
+      margin-top: 10px; }
     chat.cu > message.right {
       float: right;
       margin: 0 8px 0 0; }
