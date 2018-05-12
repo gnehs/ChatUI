@@ -78,6 +78,24 @@ html
                     .text 這是偶去美國拍的照片
                     .meta
                         .item 15:30
+            //- 只發一個影片
+            message.video.only
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    video(src='http://html5demos.com/assets/dizzy.mp4',controls)
+                    .meta
+                        .item 15:38
+            //- 嵌入影片
+            message.iframe
+                .avatar
+                    img(src='https://i.imgur.com/nMMGqle.png')
+                .content
+                    .author 丹尼斯
+                    <iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    .text 這是偶演ㄉ動畫
+                    .meta
+                        .item 15:38
             //- 只發一張圖
             message.img.only.right
                 .avatar
@@ -85,5 +103,5 @@ html
                 .content
                     img(src='https://i.imgur.com/kJiZpmg.png')
                     .meta
-                        .item 15:30
+                        .item 15:38
 

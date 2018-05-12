@@ -31,16 +31,18 @@ chat.cu
         &.right
             flex-direction: row-reverse
             margin: 0 8px 0 0
-        &.img
-            &>.content
-                &>img
-                    width: 450px
+        
+        &>.content
+            &>img,video,iframe
+                width: 450px
+            &>video,iframe
+                min-height: 250px
         &>.avatar
             position: relative
             margin: 0 5px 0 0
             &>img
                 width: 40px
-                border-radius: 5px
+                transition: 0.1s
         &>.content
             background-color: #fff
             width: auto
@@ -50,10 +52,6 @@ chat.cu
             flex: 1
             position: relative
             display: table
-            &>.reply
-                border-left: 2px solid #37a1de
-                margin-left: 8px
-                padding-left: 2px
             &>.meta
                 text-align: right
                 padding: 0 8px 3px 8px
@@ -64,16 +62,13 @@ chat.cu
 @media(max-width: 768px)
     chat.cu
         & message
-            &.img
-                &>.content
-                    max-width: 80vw
-                    &>img
-                        width: 450px
-                        max-width: 100%
-            
             &>.content
                 max-width: 80vw
+                &>img,video,iframe
+                    width: 450px
+                    max-width: 100%
+                &>video,iframe
+                    min-height: 200px
             &>.avatar
                 &>img
-                    width: 25px
-                    border-radius: 3px
+                    width: 30px
