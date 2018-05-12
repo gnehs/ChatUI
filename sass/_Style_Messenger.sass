@@ -23,7 +23,7 @@ chat.cu[data-style="messenger"]
                 border-radius: 1.219em
                 padding: 0.375em 0.844em
                 width: max-content
-                max-width: 80vw
+                max-width: 450px
             &>img,&>iframe,&>video
                 border-radius: 1.219em
                 border-bottom-left-radius: 0.25em
@@ -41,7 +41,7 @@ chat.cu[data-style="messenger"]
                 overflow: hidden
                 padding-bottom: .4em
                 &>img 
-                    max-width: 80vw
+                    max-width: 450px
                     padding-bottom: .4em
                 &>.title,&>.header
                     font-weight: bold
@@ -127,3 +127,11 @@ chat.cu[data-style="messenger"]
                             border-top-left-radius: 1.219em !important
                             border-bottom-right-radius: 1.219em !important
                             border-bottom-left-radius: 1.219em !important
+
+/*  RWD  */
+@media(max-width: 768px)
+    chat.cu[data-style="messenger"]
+        & message
+            &>.content
+                &>.text,&>.perview>img
+                    max-width: 80vw

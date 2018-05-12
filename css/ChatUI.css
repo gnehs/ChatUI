@@ -266,7 +266,7 @@ chat.cu[data-style="messenger"] message {
     width: -webkit-max-content;
     width: -moz-max-content;
     width: max-content;
-    max-width: 80vw; }
+    max-width: 450px; }
   chat.cu[data-style="messenger"] message > .content > img, chat.cu[data-style="messenger"] message > .content > iframe, chat.cu[data-style="messenger"] message > .content > video {
     border-radius: 1.219em;
     border-bottom-left-radius: 0.25em; }
@@ -284,7 +284,7 @@ chat.cu[data-style="messenger"] message {
     overflow: hidden;
     padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > img {
-      max-width: 80vw;
+      max-width: 450px;
       padding-bottom: .4em; }
     chat.cu[data-style="messenger"] message > .content > .perview > .title, chat.cu[data-style="messenger"] message > .content > .perview > .header {
       font-weight: bold; }
@@ -342,5 +342,10 @@ chat.cu[data-style="messenger"] message-group message {
     border-top-left-radius: 1.219em !important;
     border-bottom-right-radius: 1.219em !important;
     border-bottom-left-radius: 1.219em !important; }
+
+/*  RWD  */
+@media (max-width: 768px) {
+  chat.cu[data-style="messenger"] message > .content > .text, chat.cu[data-style="messenger"] message > .content > .perview > img {
+    max-width: 80vw; } }
 
 /*# sourceMappingURL=ChatUI.css.map */
