@@ -8,6 +8,9 @@ chat.cu
     background-attachment: fixed
     background-size: cover
     clear: both
+    position      : relative
+    display       : flex
+    flex-direction: column
     & p
         line-height: 1.4em
         margin: 0
@@ -24,13 +27,15 @@ chat.cu
         display: table
     & message
         display: flex
+        flex-wrap: wrap
+        width: max-content
         margin: 0 0 0 0.5em
         padding-top: 8px
         &:first-child
             margin-top: 0px
         &.right
             flex-direction: row-reverse
-            margin: 0 0.5em 0 0
+            margin: 0 0.5em 0 auto
         
         &>.content
             &>img,video,iframe

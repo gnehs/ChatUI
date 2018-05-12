@@ -8,7 +8,17 @@ chat.cu {
   font-size: 16px;
   background-attachment: fixed;
   background-size: cover;
-  clear: both; }
+  clear: both;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column; }
   chat.cu p {
     line-height: 1.4em;
     margin: 0; }
@@ -28,6 +38,12 @@ chat.cu {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
     margin: 0 0 0 0.5em;
     padding-top: 8px; }
     chat.cu message:first-child {
@@ -38,7 +54,7 @@ chat.cu {
       -webkit-flex-direction: row-reverse;
       -ms-flex-direction: row-reverse;
       flex-direction: row-reverse;
-      margin: 0 0.5em 0 0; }
+      margin: 0 0.5em 0 auto; }
     chat.cu message > .content > img, chat.cu message > .content video, chat.cu message > .content iframe {
       width: 450px; }
     chat.cu message > .content > video, chat.cu message > .content iframe {
