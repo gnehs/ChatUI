@@ -154,16 +154,21 @@ chat.cu[data-style="telegram"] {
       line-height: 1.12em;
       padding-left: 0.750em;
       padding-right: 3.250em; }
+      chat.cu[data-style="telegram"] message > .content > .text a {
+        color: #1790d3;
+        text-decoration: none; }
+        chat.cu[data-style="telegram"] message > .content > .text a:hover {
+          text-decoration: underline; }
     chat.cu[data-style="telegram"] message > .content > .reply {
       border-left: 0.125em solid #37a1de;
       padding-left: 0.625em;
-      margin: 0 0.750em 5px 0.750em; }
+      margin: 0 0.750em 0.313em 0.750em; }
       chat.cu[data-style="telegram"] message > .content > .reply > .author {
         color: #37a1de; }
     chat.cu[data-style="telegram"] message > .content > .perview {
       border-left: 0.125em solid #37a1de;
       padding-left: 0.625em;
-      margin: 0 0.750em 5px 0.750em;
+      margin: 0.313em 0.750em 0.313em 0.750em;
       line-height: 1.22em; }
       chat.cu[data-style="telegram"] message > .content > .perview > .title {
         color: #37a1de;
