@@ -67,7 +67,7 @@ chat.cu {
         padding-left: 2px; }
       chat.cu > message > .content > .meta {
         text-align: right;
-        padding: 0 8px; }
+        padding: 0 8px 3px 8px; }
         chat.cu > message > .content > .meta > .item {
           display: inline-block;
           color: #a0accf; }
@@ -97,8 +97,11 @@ chat.cu[data-style="telegram"] {
     background-color: rgba(0, 0, 0, 0.3);
     margin: 5px;
     padding: 3px 6px;
-    border-radius: 2px;
-    opacity: 0; }
+    border-radius: 5px;
+    opacity: 0;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
+    transition: 0.1s; }
     chat.cu[data-style="telegram"] > message.img.only > .content > .meta > .item {
       color: #FFF; }
   chat.cu[data-style="telegram"] > message.img.only > .content:hover > .meta {
