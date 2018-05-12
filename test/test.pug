@@ -1,25 +1,49 @@
 html
     head
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css', rel='stylesheet')
+        link(href='../css/ChatUI.css', rel='stylesheet')
+        title Test Page
     body
-        chat.cu(data-style='telegram')
+        chat.cu(data-style='telegram',style='background-image:url(https://i.snag.gy/wLROud.jpg)')
             //- 讀取器
             loading.active
+            //- 分隔線
+            divider 10 May
             //- 左側文字訊息
             message.text
-                .author 熊貓貓
                 .avatar
-                    img
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
                 .content
-                    p 這是偶去美國拍的欸片
+                    .author 熊貓貓
+                    .reply
+                        .author 藍色小狐狸
+                        .content
+                            .text 我想吃雞排////
+                    .text 
+                        p 這是偶去美國拍的欸片
+                        p 這是第二行
                     .meta
                         .item 15:30
             //- 右側圖片訊息
             message.img.right 
-                .author 熊貓貓
                 .avatar
-                    img
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
                 .content
-                    img
-                    p 這是偶去美國拍的欸片
+                    .author 熊貓貓
+                    img(src='https://i.imgur.com/VJJ0zYN.gif')
+                    .text 這是偶去美國拍的欸片
+                    .meta
+                        .item 15:30
+                        .item read
+            //- 左側文字訊息
+            message.img 
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    img(src='https://i.imgur.com/ENHhwcQ.jpg')
+                    .text 這是偶去美國拍的欸片
+                    .meta
+                        .item 15:30
             divider 11 May
 

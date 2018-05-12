@@ -1,24 +1,52 @@
 
 <html>
-  <head></head>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet"/>
+    <link href="../css/ChatUI.css" rel="stylesheet"/>
+    <title>Test Page</title>
+  </head>
   <body>
-    <chat class="cu" data-style="telegram">
+    <chat class="cu" data-style="telegram" style="background-image:url(https://i.snag.gy/wLROud.jpg);">
       <loading class="active"></loading>
+      <divider>10 May</divider>
       <message class="text">
-        <div class="author">熊貓貓</div>
-        <div class="avatar"><img/></div>
+        <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
         <div class="content">
-          <p>這是偶去美國拍的欸片</p>
+          <div class="author">熊貓貓</div>
+          <div class="reply">
+            <div class="author">藍色小狐狸</div>
+            <div class="content">
+              <div class="text">我想吃雞排////</div>
+            </div>
+          </div>
+          <div class="text"> 
+            <p>這是偶去美國拍的欸片</p>
+            <p>這是第二行</p>
+          </div>
           <div class="meta">
             <div class="item">15:30</div>
           </div>
         </div>
       </message>
       <message class="img right"> 
-        <div class="author">熊貓貓</div>
-        <div class="avatar"><img/></div>
-        <div class="content"><img/>
-          <p>這是偶去美國拍的欸片</p>
+        <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
+        <div class="content">
+          <div class="author">熊貓貓</div><img src="https://i.imgur.com/VJJ0zYN.gif"/>
+          <div class="text">這是偶去美國拍的欸片</div>
+          <div class="meta">
+            <div class="item">15:30</div>
+            <div class="item">read</div>
+          </div>
+        </div>
+      </message>
+      <message class="img"> 
+        <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
+        <div class="content">
+          <div class="author">熊貓貓</div><img src="https://i.imgur.com/ENHhwcQ.jpg"/>
+          <div class="text">這是偶去美國拍的欸片</div>
+          <div class="meta">
+            <div class="item">15:30</div>
+          </div>
         </div>
       </message>
       <divider>11 May</divider>

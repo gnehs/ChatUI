@@ -1,0 +1,57 @@
+chat.cu
+    width: 100%
+    background-color: #dedede
+    display: block
+    padding: 8px 0
+    background-attachment: fixed
+    background-size: cover
+    & p
+        line-height: 1em
+    &>*
+        clear: both
+    &>divider
+        padding: 4.5px 12.5px
+        border-radius: 12.5px
+        background-color: rgba(0, 0, 0, .3)
+        color: #fff
+        margin: 8px auto
+        display: block
+        width: auto
+        display: table
+        max-width: 430px
+    &>message
+        display: flex
+        margin: 0 0 0 8px
+        &.right
+            float: right
+            margin: 0 8px 0 0
+        &.img
+            &>.content
+                &>img
+                    width: 450px
+        &>.avatar
+            position: relative
+            margin: 0 5px 0 0
+            &>img
+                width: 40px
+                border-radius: 5px
+        &>.content
+            background-color: #fff
+            width: 200px
+            max-width: 450px
+            border-radius: 5px
+            flex-direction: column
+            flex: 1
+            position: relative
+            display: table
+            &>.reply
+                border-left: 3px solid #000
+                margin-left: 8px
+                padding-left: 2px
+            &>.meta
+                text-align: right
+                padding: 0 8px
+                &>.item
+                    display: inline-block
+                    color: #a0accf
+
