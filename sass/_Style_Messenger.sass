@@ -1,0 +1,69 @@
+chat.cu[data-style="messenger"]
+    &>divider
+        background-color: transparent
+        color: rgba(0, 0, 0, .40)
+        font-weight: 500
+        font-size: 0.813em
+    & message
+        margin-top: 1em
+        &>.avatar
+            margin-top: 1em
+            &>img
+                width: 1.750em
+                border-radius: 100%
+        &>.content
+            &>.reply,&>.meta
+                display: none
+            &>.author
+                margin-left: .8em
+                font-size: 0.875em
+                color: #90949c
+            &>.text
+                background: rgb(241, 240, 240)
+                border-radius: 1.219em
+                padding: 0.375em 0.844em
+            &>img,&>iframe,&>video
+                border-radius: 1.219em
+                border-bottom-left-radius: 0.25em
+            &>img+.text,&>iframe+.text,&>video+.text
+                margin-top: 0.2em
+                border-top-left-radius: 0.25em
+        &.only
+            &>.content
+                &>img,iframe,video
+                    border-radius: 1.219em
+        &.right
+            &>.avatar
+                display: none
+            &>.content
+                &>.author
+                    display: none
+    & message-group
+        & message
+            margin-top: 0.2em
+            &>.content
+                &>.text,&>img,&>iframe,&>video
+                    border-bottom-left-radius: 0.25em !important
+                    border-top-left-radius: 0.25em !important
+            &:nth-child(n+2)
+                &>.avatar
+                    opacity: 0
+                &>.content
+                    &>.author
+                        display: none
+            &:first-child:not(.img):not(.iframe):not(.video)
+                &>.content
+                    &>.text
+                        border-top-left-radius: 1.219em !important
+            &:last-child:not(.img):not(.iframe):not(.video)
+                &>.content
+                    &>.text
+                        border-bottom-left-radius: 1.219em !important
+            &.img:first-child,&.iframe:first-child,&.video:first-child
+                &>.content
+                    &>img,&>iframe,&>video
+                        border-top-left-radius: 1.219em !important
+            &.img:last-child,&.iframe:last-child,&.video:last-child
+                &>.content
+                    &>img,&>iframe,&>video
+                        border-bottom-left-radius: 1.219em !important

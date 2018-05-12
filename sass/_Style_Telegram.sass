@@ -1,11 +1,6 @@
 chat.cu[data-style="telegram"]
-    width: 100%
-    background-color: #dedede
-    display: block
-    padding: 0.500em 0
-    background-attachment: fixed
-    background-size: cover
     & message
+        padding-top: 8px
         &.right:not(.read)
             &>.content>.meta>.item:last-child:after
                 font-family: 'icomoon' !important
@@ -33,7 +28,7 @@ chat.cu[data-style="telegram"]
                 &:hover
                     &>.meta
                         opacity: 1
-                &>img,iframe,video
+                &>img,&>iframe,&>video
                     border-radius: .5em
         &.img,&.iframe,&.video
             &>.content

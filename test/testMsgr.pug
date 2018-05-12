@@ -1,0 +1,132 @@
+html
+    head
+        link(href='https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css', rel='stylesheet')
+        link(href='../css/ChatUI.css', rel='stylesheet')
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        title Test Page
+    body
+        chat.cu(data-style='messenger')
+            // 讀取器
+            loading.active
+            // 分隔線
+            divider 2018年3月3日 17:16
+            // 左側短文字訊息
+            message.text
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        p 這是三小
+                    .meta
+                        .item 13:20
+            // 右側短文字訊息
+            message.text.right.read
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        p 這是關東煮喔 ❤️
+                    .meta
+                        .item 13:20
+            // 左側回覆文字訊息
+            message.text
+                .avatar
+                    img(src='https://i.imgur.com/MTDS9BN.png')
+                .content
+                    .author 可ㄞ狗狗
+                    .reply
+                        .author 熊貓貓
+                        .content
+                            .text 這是三小
+                    .text
+                        p 這是偶去美國拍的照片
+                        p 這是第二行
+                        p 然後始春還是延其月
+                    .meta
+                        .item 13:23
+            // 左側長文字訊息
+            message.text
+                .avatar
+                    img(src='https://i.imgur.com/ncjaFUd.png')
+                .content
+                    .author 大懶貓
+                    .reply
+                        .author 可ㄞ狗狗
+                        .content
+                            .text 這是偶去美國拍的照片 這是第二行...
+                    .text
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    .meta
+                        .item 13:23
+            // 分隔線
+            divider 2018年5月11日 17:16
+            // 訊息群組
+            message-group
+                // 左側文字訊息
+                message.img
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        .author 熊貓貓
+                        img(src='https://i.imgur.com/VJJ0zYN.gif')
+                        .text 
+                            p 別擔心，孩子。
+                            p 當你跟我一樣有了工作，你會錯過每個夏天。
+                        .meta
+                            .item 15:30
+                // 只發一個影片
+                message.video.only
+                    .avatar
+                        img(src='https://i.imgur.com/6oTWGHZ.png')
+                    .content
+                        video(src='http://html5demos.com/assets/dizzy.mp4',controls)
+                        .meta
+                            .item 15:38
+            // 嵌入影片
+            message.iframe
+                .avatar
+                    img(src='https://i.imgur.com/nMMGqle.png')
+                .content
+                    .author 丹尼斯
+                    <iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    .text 這是偶演ㄉ動畫
+                    .meta
+                        .item 15:38
+            // 只發一張圖
+            message.img.only.right.read
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    img(src='https://i.imgur.com/kJiZpmg.png')
+                    .meta
+                        .item 15:42
+            // 右側短文字訊息
+            message.text.right
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        p 會考倒數
+                        p 距離會考還剩下 6 天喔
+                    .meta
+                        .item 16:02
+            // 連結預覽
+            message.text.right
+                .avatar
+                    img(src='https://i.imgur.com/6oTWGHZ.png')
+                .content
+                    .author 熊貓貓
+                    .text
+                        a(href='https://gnehs.net/') https://gnehs.net/
+                    .perview
+                        .title 棒棒勝
+                        .header 可愛ㄉ棒棒勝喔
+                        .description 住在某鬼島ㄉ高中生
+                        img(src='https://avatars0.githubusercontent.com/u/16719720')
+                    .meta
+                        .item 16:05
+
