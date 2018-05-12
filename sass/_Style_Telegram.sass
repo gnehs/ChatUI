@@ -2,20 +2,21 @@ chat.cu[data-style="telegram"]
     width: 100%
     background-color: #dedede
     display: block
-    padding: 8px 0
+    padding: 0.500em 0
     background-attachment: fixed
     background-size: cover
     & message
         &.only
             &>.content
+                padding-top: 0
                 &>.meta
                     position: absolute
                     bottom: 0
                     right: 0
                     background-color: rgba(0, 0, 0, 0.3)
-                    margin: 5px
-                    padding: 3px 6px
-                    border-radius: 8px
+                    margin: 0.313em
+                    padding: 0.188em 0.375em
+                    border-radius: .5em
                     opacity: 0
                     transition: 0.1s
                     &>.item.item
@@ -24,36 +25,41 @@ chat.cu[data-style="telegram"]
                     &>.meta
                         opacity: 1
                 &>img,iframe,video
-                    border-radius: 8px
+                    border-radius: .5em
         &.img,&.iframe,&.video
             &>.content
                 &>.author
-                    padding-bottom: 5px
+                    padding-bottom: 0.313em
                 &>.text
-                    padding-top: 10px
+                    padding-top: 0.625em
         &>.avatar
             &>img
                 border-radius: 100%
         &>.content
+            padding-top: 0.625em
             background-color: #fff
-            border-radius: 8px
+            border-radius: 0.5em
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15)
             &>.author
-                padding-left: 12px
-                padding-top: 10px
-                padding-right: 12px
+                padding-left: 0.750em
+                padding-right: 0.750em
             &>.text
-                padding-left: 12px
-                padding-right: 40px
+                line-height: 1.12em
+                padding-left: 0.750em
+                padding-right: 3.250em
             &>.reply
-                border-left: 2px solid #37a1de
-                padding-left: 10px
-                margin: 10px 12px
+                border-left: 0.125em solid #37a1de
+                padding-left: 0.625em
+                margin: 0 0.750em 5px 0.750em
                 &>.author
                     color: #37a1de
+            &>.author+.reply
+                margin: 0.625em 0.750em 0.313em 0.750em
             &>.meta
-                margin-top: -.8em
+                margin-top: -.9em
+                margin-bottom: .2em
                 &>.item
+                    font-size: .9em
                     color: #d1d1d1
         &.right
             &>.avatar

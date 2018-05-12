@@ -3,34 +3,34 @@ chat.cu
     width: 100%
     background-color: #dedede
     display: block
-    padding: 8px 0
+    padding: .5em 0
+    font-size: 16px
     background-attachment: fixed
     background-size: cover
     clear: both
     & p
-        line-height: 1.18em
+        line-height: 1.4em
         margin: 0
     &>*
         clear: both
     &>divider
-        padding: 4.5px 12.5px
-        border-radius: 12.5px
+        padding: 0.281rem 0.781rem
+        border-radius: 0.781em
         background-color: rgba(0, 0, 0, .3)
         color: #fff
-        margin: 8px auto
+        margin: 0.5em auto
         display: block
         width: auto
         display: table
-        max-width: 430px
     & message
         display: flex
-        margin: 0 0 0 8px
+        margin: 0 0 0 0.5em
         padding-top: 8px
         &:first-child
             margin-top: 0px
         &.right
             flex-direction: row-reverse
-            margin: 0 8px 0 0
+            margin: 0 0.5em 0 0
         
         &>.content
             &>img,video,iframe
@@ -39,22 +39,22 @@ chat.cu
                 min-height: 250px
         &>.avatar
             position: relative
-            margin: 0 5px 0 0
+            margin: 0 0.313em 0 0
             &>img
-                width: 40px
+                width: 2.5em
                 transition: 0.1s
         &>.content
             background-color: #fff
             width: auto
             max-width: 450px
-            border-radius: 5px
+            border-radius: 0.313em
             flex-direction: column
             flex: 1
             position: relative
             display: table
             &>.meta
                 text-align: right
-                padding: 0 8px 3px 8px
+                padding: 0 0.500em 0.188em 0.500em
                 &>.item
                     display: inline-block
                     color: #a0accf
