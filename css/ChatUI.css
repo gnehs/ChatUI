@@ -169,7 +169,7 @@ chat.cu message > .content > .meta > .item {
   content: "\e903";
 }
 
-chat.cu[data-style="telegram"] > divider {
+chat.cu[data-style="telegram"].sticky > divider {
   top: .4em;
   position: -webkit-sticky;
   position: sticky;
