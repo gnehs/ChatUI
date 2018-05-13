@@ -184,6 +184,7 @@ chat.cu[data-style="telegram"] message.right.read > .content > .meta > .item:las
 }
 
 chat.cu[data-style="telegram"] message.only > .content {
+  overflow: hidden;
   padding-top: 0;
 }
 
@@ -444,6 +445,12 @@ chat.cu[data-style="messenger"] message.right > .content > .author {
 
 chat.cu[data-style="messenger"] message.right > .content > .text {
   margin: 0 0 0 auto;
+  color: #FFF;
+  background: #0084ff;
+}
+
+chat.cu[data-style="messenger"] message.right > .content > .text a {
+  color: #FFF;
 }
 
 chat.cu[data-style="messenger"] message-group message {
