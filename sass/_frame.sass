@@ -43,7 +43,15 @@ chat.cu
         &>.avatar
             position: relative
             margin: 0 0.313em 0 0
+            &[data-initial]::before
+                display: block
+                color: #fff;
+                content: attr(data-initial)
+                z-index: 1
+                text-align: center
+                background: #5755d9
             &>img
+                background: #5755d9
                 width: 2.5em
                 transition: 0.1s
         &>.content

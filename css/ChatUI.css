@@ -80,7 +80,17 @@ chat.cu message > .avatar {
   margin: 0 0.313em 0 0;
 }
 
+chat.cu message > .avatar[data-initial]::before {
+  display: block;
+  color: #fff;
+  content: attr(data-initial);
+  z-index: 1;
+  text-align: center;
+  background: #5755d9;
+}
+
 chat.cu message > .avatar > img {
+  background: #5755d9;
   width: 2.5em;
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
@@ -228,6 +238,13 @@ chat.cu[data-style="telegram"] message.img > .content > .text, chat.cu[data-styl
   padding-top: 0.625em;
 }
 
+chat.cu[data-style="telegram"] message > .avatar[data-initial]::before {
+  border-radius: 100%;
+  width: 2.5em;
+  height: 2.5em;
+  line-height: 2.5em;
+}
+
 chat.cu[data-style="telegram"] message > .avatar > img {
   border-radius: 100%;
 }
@@ -368,6 +385,13 @@ chat.cu[data-style="messenger"] message {
 
 chat.cu[data-style="messenger"] message > .avatar {
   margin-top: 1em;
+}
+
+chat.cu[data-style="messenger"] message > .avatar[data-initial]::before {
+  border-radius: 100%;
+  width: 1.750em;
+  height: 1.750em;
+  line-height: 1.750em;
 }
 
 chat.cu[data-style="messenger"] message > .avatar > img {
