@@ -1,23 +1,23 @@
 .cu.chat[data-style="telegram"]
-    &.sticky>divider
+    &.sticky>divider //need js
         top: .4em
         position: sticky
     & .message
         padding-top: 8px
         &.right:not(.read)
-            &>.content>.meta>.item:last-child:after
+            >.content>.meta>.item:last-child:after
                 font-family: 'icomoon' !important
                 content: " \e903"
         &.right.read
-            &>.content>.meta>.item:last-child:after
+            >.content>.meta>.item:last-child:after
                 font-family: 'icomoon' !important
                 content: " \e902"
 
         &.only
-            &>.content
+            >.content
                 overflow: hidden
                 padding-top: 0
-                &>.meta
+                >.meta
                     position: absolute
                     bottom: 0
                     right: 0
@@ -32,98 +32,98 @@
                 &:hover
                     &>.meta
                         opacity: 1
-                &>img,&>iframe,&>video
+                >img,>iframe,>video
                     border-radius: .5em
         &.img,&.iframe,&.video
-            &>.content
-                &>.author
+            >.content
+                >.author
                     padding-bottom: 0.313em
-                &>.text
+                >.text
                     padding-top: 0.625em
-                &>img,&>iframe,&>video
-                    border-radius: .5em .5em 0 0
-        &>.avatar
+                >img,>iframe,>video
+                    border-radius: 0
+        >.avatar
             &[data-initial]::before
                 border-radius: 100%
                 width: 2.5em
                 height: 2.5em
                 line-height: 2.5em
-            &>img
+            >img
                 border-radius: 100%
-        &>.content
+        >.content
             padding-top: 0.625em
             background-color: #fff
             border-radius: 0.5em
             box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15)
-            &>.author
+            >.author
                 padding-left: 0.750em
                 padding-right: 0.750em
-            &>.text
+            >.text
                 line-height: 1.12em
                 padding-left: 0.750em
                 padding-right: 3.250em
-                & a
+                a
                     color: rgb(23,144,211)
                     text-decoration: none
                     &:hover
                         text-decoration: underline
-            &>.reply
+            >.reply
                 border-left: 0.125em solid #37a1de
                 padding-left: 0.625em
                 margin: 0 0.750em 0.313em 0.750em
                 line-height: 1.22em
-                &>.author
+                >.author
                     color: #37a1de
-            &>.perview
+            >.perview
                 border-left: 0.125em solid #37a1de
                 padding-left: 0.625em
                 margin: 0.313em 0.750em 0.313em 0.750em
                 line-height: 1.22em
-                &>.title
+                >.title
                     color: #37a1de
                     font-weight: bold
-                &>.header
+                >.header
                     font-weight: bold
-                &>img
+                >img
                     width: 100%
                     margin-top: .2em
-            &>.author+.reply
+            >.author+.reply
                 margin: 0.625em 0.750em 0.313em 0.750em
-            &>.meta
+            >.meta
                 float: right
                 margin-top: -.9em
                 margin-bottom: .2em
                 &>.item
                     font-size: .9em
                     color: #d1d1d1
-            &>.perview+.meta
+            >.perview+.meta
                 margin-top: .2em
         // 右側訊息
         &.right
-            &>.avatar
+            >.avatar
                 display: none
-            &>.content
+            >.content
                 background-color: #effdde
-                &>.author
+                >.author
                     display: none
-                &>.text
+                >.text
                     padding-right: 4.5em
-                &>.meta
+                >.meta
                     &>.item
                         color: #78c67f
-                &>.reply
+                >.reply
                     border-left: 0.125em solid rgb(93,196,82)
                     &>.author
                         color: rgb(93,196,82)
-                &>.perview
+                >.perview
                     border-left: 0.125em solid rgb(93,196,82)
-                    &>.title
+                    >.title
                         color: rgb(93,196,82)
-    & .message-group
-        & .message
+    .message-group
+        .message
             &:nth-child(n+2)
-                &>.avatar
+                >.avatar
                     opacity: 0
-                &>.content
-                    &>.author
+                >.content
+                    >.author
                         display: none

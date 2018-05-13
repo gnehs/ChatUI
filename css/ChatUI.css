@@ -18,6 +18,7 @@
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
+  line-height: 1;
 }
 
 .cu.chat p {
@@ -25,11 +26,11 @@
   margin: 0;
 }
 
-.cu.chat > * {
+.cu.chat * {
   clear: both;
 }
 
-.cu.chat > divider {
+.cu.chat divider {
   padding: 0.281rem 0.781rem;
   border-radius: 0.781em;
   background-color: rgba(0, 0, 0, 0.3);
@@ -67,11 +68,12 @@
   margin: 0 0.5em 0 auto;
 }
 
-.cu.chat .message > .content > img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
+.cu.chat .message > .content img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
   width: 450px;
+  vertical-align: top;
 }
 
-.cu.chat .message > .content > video, .cu.chat .message > .content iframe {
+.cu.chat .message > .content video, .cu.chat .message > .content iframe {
   min-height: 250px;
 }
 
@@ -114,12 +116,12 @@
   display: table;
 }
 
-.cu.chat .message > .content > .meta {
+.cu.chat .message > .content .meta {
   text-align: right;
   padding: 0 0.500em 0.188em 0.500em;
 }
 
-.cu.chat .message > .content > .meta > .item {
+.cu.chat .message > .content .meta .item {
   display: inline-block;
   color: #a0accf;
 }
@@ -129,11 +131,11 @@
   .cu.chat .message > .content {
     max-width: 80vw;
   }
-  .cu.chat .message > .content > img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
-    width: 450px;
+  .cu.chat .message img, .cu.chat .message video, .cu.chat .message iframe {
     max-width: 100%;
+    width: 450px;
   }
-  .cu.chat .message > .content > video, .cu.chat .message > .content iframe {
+  .cu.chat .message img video, .cu.chat .message img iframe, .cu.chat .message video video, .cu.chat .message video iframe, .cu.chat .message iframe video, .cu.chat .message iframe iframe {
     min-height: 200px;
   }
   .cu.chat .message > .avatar > img {
@@ -239,7 +241,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.img > .content > img, .cu.chat[data-style="telegram"] .message.img > .content > iframe, .cu.chat[data-style="telegram"] .message.img > .content > video, .cu.chat[data-style="telegram"] .message.iframe > .content > img, .cu.chat[data-style="telegram"] .message.iframe > .content > iframe, .cu.chat[data-style="telegram"] .message.iframe > .content > video, .cu.chat[data-style="telegram"] .message.video > .content > img, .cu.chat[data-style="telegram"] .message.video > .content > iframe, .cu.chat[data-style="telegram"] .message.video > .content > video {
-  border-radius: .5em .5em 0 0;
+  border-radius: 0;
 }
 
 .cu.chat[data-style="telegram"] .message > .avatar[data-initial]::before {

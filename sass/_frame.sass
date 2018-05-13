@@ -7,15 +7,16 @@
     background-attachment: fixed
     background-size: cover
     clear: both
-    position      : relative
-    display       : flex
+    position: relative
+    display: flex
     flex-direction: column
+    line-height: 1
     & p
         line-height: 1.4em
         margin: 0
-    &>*
+    *
         clear: both
-    &>divider
+    divider
         padding: 0.281rem 0.781rem
         border-radius: 0.781em
         background-color: rgba(0, 0, 0, .3)
@@ -36,9 +37,10 @@
             margin: 0 0.5em 0 auto
         
         &>.content
-            &>img,video,iframe
+            img,video,iframe
                 width: 450px
-            &>video,iframe
+                vertical-align: top
+            video,iframe
                 min-height: 250px
         &>.avatar
             position: relative
@@ -62,23 +64,23 @@
             flex: 1
             position: relative
             display: table
-            &>.meta
+            .meta
                 text-align: right
                 padding: 0 0.500em 0.188em 0.500em
-                &>.item
+                .item
                     display: inline-block
                     color: #a0accf
 /*  RWD  */
 @media(max-width: 768px)
     .cu.chat
-        & .message
-            &>.content
+        .message
+            >.content
                 max-width: 80vw
-                &>img,video,iframe
-                    width: 450px
-                    max-width: 100%
-                &>video,iframe
+            img,video,iframe
+                max-width: 100%
+                width: 450px
+                video,iframe
                     min-height: 200px
-            &>.avatar
-                &>img
+            >.avatar
+                >img
                     width: 30px
