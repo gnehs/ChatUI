@@ -65,40 +65,36 @@ chat.cu[data-style="messenger"]
     & message-group
         & message
             margin-top: 0.2em
-            &>.content
-                &>.text,&>img,&>iframe,&>video,&>.perview
-                    border-bottom-left-radius: 0.25em !important
-                    border-top-left-radius: 0.25em !important
             &:nth-child(n+2)
                 &>.avatar
                     opacity: 0
                 &>.content
                     &>.author
                         display: none
+            &>.content
+                &>.text,&>img,&>iframe,&>video,&>.perview
+                    border-radius: 0.25em 1.219em 1.219em 0.25em !important
             &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
                 &>.content
                     &>.text
-                        border-top-left-radius: 1.219em !important
+                        border-radius: 1.219em  1.219em 1.219em 0.25em !important
             &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
                 &>.content
                     &>.text
-                        border-bottom-left-radius: 1.219em !important
+                        border-radius: 0.25em  1.219em 1.219em 1.219em !important
             &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
                 &>.content
                     &>img,&>iframe,&>video,&>.perview
-                        border-top-left-radius: 1.219em !important
+                        border-radius: 1.219em  1.219em 1.219em 0.25em!important
             &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
                 &>.content
                     &>img,&>iframe,&>video,&>.perview
-                        border-bottom-left-radius: 1.219em !important
+                        border-radius: 0.25em  1.219em 1.219em 1.219em !important
             
             &.right
                 &>.content
                     &>.text,&>img,&>iframe,&>video
-                        border-bottom-right-radius: 0.25em !important
-                        border-top-right-radius: 0.25em !important
-                        border-top-left-radius: 1.219em !important
-                        border-bottom-left-radius: 1.219em !important
+                        border-radius: 1.219em 0.25em 0.25em 1.219em !important
                 &:nth-child(n+2)
                     &>.avatar
                         opacity: 0
@@ -108,25 +104,19 @@ chat.cu[data-style="messenger"]
                 &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
                     &>.content
                         &>.text
-                            border-top-right-radius: 1.219em !important
-                            border-top-left-radius: 1.219em !important
+                            border-radius: 1.219em 1.219em 0.25em 1.219em !important
                 &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
                     &>.content
                         &>.text
-                            border-top-left-radius: 1.219em !important
-                            border-bottom-right-radius: 1.219em !important
-                            border-bottom-left-radius: 1.219em !important
+                            border-radius: 1.219em 0.25em 1.219em 1.219em !important
                 &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
                     &>.content
                         &>img,&>iframe,&>video,&>.perview
-                            border-bottom-left-radius: 1.219em !important
-                            border-top-right-radius: 1.219em !important
+                            border-radius: 1.219em 1.219em 0.25em 1.219em !important
                 &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
                     &>.content
                         &>img,&>iframe,&>video,&>.perview
-                            border-top-left-radius: 1.219em !important
-                            border-bottom-right-radius: 1.219em !important
-                            border-bottom-left-radius: 1.219em !important
+                            border-radius: 1.219em 0.25em 1.219em 1.219em !important
 
 /*  RWD  */
 @media(max-width: 768px)
