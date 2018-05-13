@@ -239,7 +239,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.img > .content > img, .cu.chat[data-style="telegram"] .message.img > .content > iframe, .cu.chat[data-style="telegram"] .message.img > .content > video, .cu.chat[data-style="telegram"] .message.iframe > .content > img, .cu.chat[data-style="telegram"] .message.iframe > .content > iframe, .cu.chat[data-style="telegram"] .message.iframe > .content > video, .cu.chat[data-style="telegram"] .message.video > .content > img, .cu.chat[data-style="telegram"] .message.video > .content > iframe, .cu.chat[data-style="telegram"] .message.video > .content > video {
-  border-radius: .5em .5em 0;
+  border-radius: .5em .5em 0 0;
 }
 
 .cu.chat[data-style="telegram"] .message > .avatar[data-initial]::before {
