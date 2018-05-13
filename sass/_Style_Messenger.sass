@@ -1,10 +1,10 @@
-cu-chat[data-style="messenger"]
+.cu.chat[data-style="messenger"]
     &>divider
         background-color: transparent
         color: rgba(0, 0, 0, .40)
         font-weight: 500
         font-size: 0.813em
-    & message
+    & .message
         margin-top: 1em
         &>.avatar
             margin-top: 1em
@@ -71,8 +71,8 @@ cu-chat[data-style="messenger"]
                     background: #0084ff
                     & a
                         color: #FFF
-    & message-group
-        & message
+    & .message-group
+        & .message
             margin-top: 0.2em
             &:nth-child(n+2)
                 &>.avatar
@@ -129,8 +129,8 @@ cu-chat[data-style="messenger"]
 
 /*  RWD  */
 @media(max-width: 768px)
-    cu-chat[data-style="messenger"]
-        & message
+    .cu.chat[data-style="messenger"]
+        & .message
             &>.content
                 &>.text,&>.perview>img
                     max-width: 80vw

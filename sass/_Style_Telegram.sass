@@ -1,8 +1,8 @@
-cu-chat[data-style="telegram"]
+.cu.chat[data-style="telegram"]
     &.sticky>divider
         top: .4em
         position: sticky
-    & message
+    & .message
         padding-top: 8px
         &.right:not(.read)
             &>.content>.meta>.item:last-child:after
@@ -117,8 +117,8 @@ cu-chat[data-style="telegram"]
                     border-left: 0.125em solid rgb(93,196,82)
                     &>.title
                         color: rgb(93,196,82)
-    & message-group
-        & message
+    & .message-group
+        & .message
             &:nth-child(n+2)
                 &>.avatar
                     opacity: 0

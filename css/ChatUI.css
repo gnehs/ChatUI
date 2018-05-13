@@ -1,5 +1,5 @@
 @charset "UTF-8";
-cu-chat {
+.cu.chat {
   font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif;
   width: 100%;
   display: block;
@@ -20,16 +20,16 @@ cu-chat {
   flex-direction: column;
 }
 
-cu-chat p {
+.cu.chat p {
   line-height: 1.4em;
   margin: 0;
 }
 
-cu-chat > * {
+.cu.chat > * {
   clear: both;
 }
 
-cu-chat > divider {
+.cu.chat > divider {
   padding: 0.281rem 0.781rem;
   border-radius: 0.781em;
   background-color: rgba(0, 0, 0, 0.3);
@@ -40,7 +40,7 @@ cu-chat > divider {
   display: table;
 }
 
-cu-chat message {
+.cu.chat .message {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,11 +54,11 @@ cu-chat message {
   margin: 0 0 0 0.5em;
 }
 
-cu-chat message:first-child {
+.cu.chat .message:first-child {
   margin-top: 0px;
 }
 
-cu-chat message.right {
+.cu.chat .message.right {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
   -webkit-flex-direction: row-reverse;
@@ -67,20 +67,20 @@ cu-chat message.right {
   margin: 0 0.5em 0 auto;
 }
 
-cu-chat message > .content > img, cu-chat message > .content video, cu-chat message > .content iframe {
+.cu.chat .message > .content > img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
   width: 450px;
 }
 
-cu-chat message > .content > video, cu-chat message > .content iframe {
+.cu.chat .message > .content > video, .cu.chat .message > .content iframe {
   min-height: 250px;
 }
 
-cu-chat message > .avatar {
+.cu.chat .message > .avatar {
   position: relative;
   margin: 0 0.313em 0 0;
 }
 
-cu-chat message > .avatar[data-initial]::before {
+.cu.chat .message > .avatar[data-initial]::before {
   display: block;
   color: #fff;
   content: attr(data-initial);
@@ -89,7 +89,7 @@ cu-chat message > .avatar[data-initial]::before {
   background: #5755d9;
 }
 
-cu-chat message > .avatar > img {
+.cu.chat .message > .avatar > img {
   background: #5755d9;
   width: 2.5em;
   -webkit-transition: 0.1s;
@@ -97,7 +97,7 @@ cu-chat message > .avatar > img {
   transition: 0.1s;
 }
 
-cu-chat message > .content {
+.cu.chat .message > .content {
   width: auto;
   max-width: 450px;
   border-radius: 0.313em;
@@ -114,29 +114,29 @@ cu-chat message > .content {
   display: table;
 }
 
-cu-chat message > .content > .meta {
+.cu.chat .message > .content > .meta {
   text-align: right;
   padding: 0 0.500em 0.188em 0.500em;
 }
 
-cu-chat message > .content > .meta > .item {
+.cu.chat .message > .content > .meta > .item {
   display: inline-block;
   color: #a0accf;
 }
 
 /*  RWD  */
 @media (max-width: 768px) {
-  cu-chat message > .content {
+  .cu.chat .message > .content {
     max-width: 80vw;
   }
-  cu-chat message > .content > img, cu-chat message > .content video, cu-chat message > .content iframe {
+  .cu.chat .message > .content > img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
     width: 450px;
     max-width: 100%;
   }
-  cu-chat message > .content > video, cu-chat message > .content iframe {
+  .cu.chat .message > .content > video, .cu.chat .message > .content iframe {
     min-height: 200px;
   }
-  cu-chat message > .avatar > img {
+  .cu.chat .message > .avatar > img {
     width: 30px;
   }
 }
@@ -179,32 +179,32 @@ cu-chat message > .content > .meta > .item {
   content: "\e903";
 }
 
-cu-chat[data-style="telegram"].sticky > divider {
+.cu.chat[data-style="telegram"].sticky > divider {
   top: .4em;
   position: -webkit-sticky;
   position: sticky;
 }
 
-cu-chat[data-style="telegram"] message {
+.cu.chat[data-style="telegram"] .message {
   padding-top: 8px;
 }
 
-cu-chat[data-style="telegram"] message.right:not(.read) > .content > .meta > .item:last-child:after {
+.cu.chat[data-style="telegram"] .message.right:not(.read) > .content > .meta > .item:last-child:after {
   font-family: 'icomoon' !important;
   content: " \e903";
 }
 
-cu-chat[data-style="telegram"] message.right.read > .content > .meta > .item:last-child:after {
+.cu.chat[data-style="telegram"] .message.right.read > .content > .meta > .item:last-child:after {
   font-family: 'icomoon' !important;
   content: " \e902";
 }
 
-cu-chat[data-style="telegram"] message.only > .content {
+.cu.chat[data-style="telegram"] .message.only > .content {
   overflow: hidden;
   padding-top: 0;
 }
 
-cu-chat[data-style="telegram"] message.only > .content > .meta {
+.cu.chat[data-style="telegram"] .message.only > .content > .meta {
   position: absolute;
   bottom: 0;
   right: 0;
@@ -218,38 +218,38 @@ cu-chat[data-style="telegram"] message.only > .content > .meta {
   transition: 0.1s;
 }
 
-cu-chat[data-style="telegram"] message.only > .content > .meta > .item.item {
+.cu.chat[data-style="telegram"] .message.only > .content > .meta > .item.item {
   color: #FFF;
 }
 
-cu-chat[data-style="telegram"] message.only > .content:hover > .meta {
+.cu.chat[data-style="telegram"] .message.only > .content:hover > .meta {
   opacity: 1;
 }
 
-cu-chat[data-style="telegram"] message.only > .content > img, cu-chat[data-style="telegram"] message.only > .content > iframe, cu-chat[data-style="telegram"] message.only > .content > video {
+.cu.chat[data-style="telegram"] .message.only > .content > img, .cu.chat[data-style="telegram"] .message.only > .content > iframe, .cu.chat[data-style="telegram"] .message.only > .content > video {
   border-radius: .5em;
 }
 
-cu-chat[data-style="telegram"] message.img > .content > .author, cu-chat[data-style="telegram"] message.iframe > .content > .author, cu-chat[data-style="telegram"] message.video > .content > .author {
+.cu.chat[data-style="telegram"] .message.img > .content > .author, .cu.chat[data-style="telegram"] .message.iframe > .content > .author, .cu.chat[data-style="telegram"] .message.video > .content > .author {
   padding-bottom: 0.313em;
 }
 
-cu-chat[data-style="telegram"] message.img > .content > .text, cu-chat[data-style="telegram"] message.iframe > .content > .text, cu-chat[data-style="telegram"] message.video > .content > .text {
+.cu.chat[data-style="telegram"] .message.img > .content > .text, .cu.chat[data-style="telegram"] .message.iframe > .content > .text, .cu.chat[data-style="telegram"] .message.video > .content > .text {
   padding-top: 0.625em;
 }
 
-cu-chat[data-style="telegram"] message > .avatar[data-initial]::before {
+.cu.chat[data-style="telegram"] .message > .avatar[data-initial]::before {
   border-radius: 100%;
   width: 2.5em;
   height: 2.5em;
   line-height: 2.5em;
 }
 
-cu-chat[data-style="telegram"] message > .avatar > img {
+.cu.chat[data-style="telegram"] .message > .avatar > img {
   border-radius: 100%;
 }
 
-cu-chat[data-style="telegram"] message > .content {
+.cu.chat[data-style="telegram"] .message > .content {
   padding-top: 0.625em;
   background-color: #fff;
   border-radius: 0.5em;
@@ -257,159 +257,159 @@ cu-chat[data-style="telegram"] message > .content {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
 }
 
-cu-chat[data-style="telegram"] message > .content > .author {
+.cu.chat[data-style="telegram"] .message > .content > .author {
   padding-left: 0.750em;
   padding-right: 0.750em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .text {
+.cu.chat[data-style="telegram"] .message > .content > .text {
   line-height: 1.12em;
   padding-left: 0.750em;
   padding-right: 3.250em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .text a {
+.cu.chat[data-style="telegram"] .message > .content > .text a {
   color: #1790d3;
   text-decoration: none;
 }
 
-cu-chat[data-style="telegram"] message > .content > .text a:hover {
+.cu.chat[data-style="telegram"] .message > .content > .text a:hover {
   text-decoration: underline;
 }
 
-cu-chat[data-style="telegram"] message > .content > .reply {
+.cu.chat[data-style="telegram"] .message > .content > .reply {
   border-left: 0.125em solid #37a1de;
   padding-left: 0.625em;
   margin: 0 0.750em 0.313em 0.750em;
   line-height: 1.22em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .reply > .author {
+.cu.chat[data-style="telegram"] .message > .content > .reply > .author {
   color: #37a1de;
 }
 
-cu-chat[data-style="telegram"] message > .content > .perview {
+.cu.chat[data-style="telegram"] .message > .content > .perview {
   border-left: 0.125em solid #37a1de;
   padding-left: 0.625em;
   margin: 0.313em 0.750em 0.313em 0.750em;
   line-height: 1.22em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .perview > .title {
+.cu.chat[data-style="telegram"] .message > .content > .perview > .title {
   color: #37a1de;
   font-weight: bold;
 }
 
-cu-chat[data-style="telegram"] message > .content > .perview > .header {
+.cu.chat[data-style="telegram"] .message > .content > .perview > .header {
   font-weight: bold;
 }
 
-cu-chat[data-style="telegram"] message > .content > .perview > img {
+.cu.chat[data-style="telegram"] .message > .content > .perview > img {
   width: 100%;
   margin-top: .2em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .author + .reply {
+.cu.chat[data-style="telegram"] .message > .content > .author + .reply {
   margin: 0.625em 0.750em 0.313em 0.750em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .meta {
+.cu.chat[data-style="telegram"] .message > .content > .meta {
   float: right;
   margin-top: -.9em;
   margin-bottom: .2em;
 }
 
-cu-chat[data-style="telegram"] message > .content > .meta > .item {
+.cu.chat[data-style="telegram"] .message > .content > .meta > .item {
   font-size: .9em;
   color: #d1d1d1;
 }
 
-cu-chat[data-style="telegram"] message > .content > .perview + .meta {
+.cu.chat[data-style="telegram"] .message > .content > .perview + .meta {
   margin-top: .2em;
 }
 
-cu-chat[data-style="telegram"] message.right > .avatar {
+.cu.chat[data-style="telegram"] .message.right > .avatar {
   display: none;
 }
 
-cu-chat[data-style="telegram"] message.right > .content {
+.cu.chat[data-style="telegram"] .message.right > .content {
   background-color: #effdde;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .author {
+.cu.chat[data-style="telegram"] .message.right > .content > .author {
   display: none;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .text {
+.cu.chat[data-style="telegram"] .message.right > .content > .text {
   padding-right: 4.5em;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .meta > .item {
+.cu.chat[data-style="telegram"] .message.right > .content > .meta > .item {
   color: #78c67f;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .reply {
+.cu.chat[data-style="telegram"] .message.right > .content > .reply {
   border-left: 0.125em solid #5dc452;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .reply > .author {
+.cu.chat[data-style="telegram"] .message.right > .content > .reply > .author {
   color: #5dc452;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .perview {
+.cu.chat[data-style="telegram"] .message.right > .content > .perview {
   border-left: 0.125em solid #5dc452;
 }
 
-cu-chat[data-style="telegram"] message.right > .content > .perview > .title {
+.cu.chat[data-style="telegram"] .message.right > .content > .perview > .title {
   color: #5dc452;
 }
 
-cu-chat[data-style="telegram"] message-group message:nth-child(n+2) > .avatar {
+.cu.chat[data-style="telegram"] .message-group .message:nth-child(n+2) > .avatar {
   opacity: 0;
 }
 
-cu-chat[data-style="telegram"] message-group message:nth-child(n+2) > .content > .author {
+.cu.chat[data-style="telegram"] .message-group .message:nth-child(n+2) > .content > .author {
   display: none;
 }
 
-cu-chat[data-style="messenger"] > divider {
+.cu.chat[data-style="messenger"] > divider {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.4);
   font-weight: 500;
   font-size: 0.813em;
 }
 
-cu-chat[data-style="messenger"] message {
+.cu.chat[data-style="messenger"] .message {
   margin-top: 1em;
 }
 
-cu-chat[data-style="messenger"] message > .avatar {
+.cu.chat[data-style="messenger"] .message > .avatar {
   margin-top: 1em;
 }
 
-cu-chat[data-style="messenger"] message > .avatar[data-initial]::before {
+.cu.chat[data-style="messenger"] .message > .avatar[data-initial]::before {
   border-radius: 100%;
   width: 1.750em;
   height: 1.750em;
   line-height: 1.750em;
 }
 
-cu-chat[data-style="messenger"] message > .avatar > img {
+.cu.chat[data-style="messenger"] .message > .avatar > img {
   width: 1.750em;
   border-radius: 100%;
 }
 
-cu-chat[data-style="messenger"] message > .content > .reply, cu-chat[data-style="messenger"] message > .content > .meta {
+.cu.chat[data-style="messenger"] .message > .content > .reply, .cu.chat[data-style="messenger"] .message > .content > .meta {
   display: none;
 }
 
-cu-chat[data-style="messenger"] message > .content > .author {
+.cu.chat[data-style="messenger"] .message > .content > .author {
   margin-left: .8em;
   font-size: 0.875em;
   color: #90949c;
 }
 
-cu-chat[data-style="messenger"] message > .content > .text {
+.cu.chat[data-style="messenger"] .message > .content > .text {
   background: #f1f0f0;
   border-radius: 1.219em;
   padding: 0.375em 0.844em;
@@ -419,21 +419,21 @@ cu-chat[data-style="messenger"] message > .content > .text {
   max-width: 450px;
 }
 
-cu-chat[data-style="messenger"] message > .content > img, cu-chat[data-style="messenger"] message > .content > iframe, cu-chat[data-style="messenger"] message > .content > video {
+.cu.chat[data-style="messenger"] .message > .content > img, .cu.chat[data-style="messenger"] .message > .content > iframe, .cu.chat[data-style="messenger"] .message > .content > video {
   border-radius: 1.219em;
   border-bottom-left-radius: 0.25em;
 }
 
-cu-chat[data-style="messenger"] message > .content > img + .text, cu-chat[data-style="messenger"] message > .content > iframe + .text, cu-chat[data-style="messenger"] message > .content > video + .text {
+.cu.chat[data-style="messenger"] .message > .content > img + .text, .cu.chat[data-style="messenger"] .message > .content > iframe + .text, .cu.chat[data-style="messenger"] .message > .content > video + .text {
   margin-top: 0.2em;
   border-top-left-radius: 0.25em;
 }
 
-cu-chat[data-style="messenger"] message > .content.perview {
+.cu.chat[data-style="messenger"] .message > .content.perview {
   background: #000;
 }
 
-cu-chat[data-style="messenger"] message > .content > .perview {
+.cu.chat[data-style="messenger"] .message > .content > .perview {
   margin-top: 0.2em;
   border: 1px solid #eee;
   border-radius: 1.219em;
@@ -443,109 +443,109 @@ cu-chat[data-style="messenger"] message > .content > .perview {
   padding-bottom: .4em;
 }
 
-cu-chat[data-style="messenger"] message > .content > .perview > img {
+.cu.chat[data-style="messenger"] .message > .content > .perview > img {
   max-width: 450px;
   padding-bottom: .4em;
 }
 
-cu-chat[data-style="messenger"] message > .content > .perview > .title, cu-chat[data-style="messenger"] message > .content > .perview > .header {
+.cu.chat[data-style="messenger"] .message > .content > .perview > .title, .cu.chat[data-style="messenger"] .message > .content > .perview > .header {
   font-weight: bold;
 }
 
-cu-chat[data-style="messenger"] message > .content > .perview > .title, cu-chat[data-style="messenger"] message > .content > .perview > .header, cu-chat[data-style="messenger"] message > .content > .perview > .description, cu-chat[data-style="messenger"] message > .content > .perview > .domain {
+.cu.chat[data-style="messenger"] .message > .content > .perview > .title, .cu.chat[data-style="messenger"] .message > .content > .perview > .header, .cu.chat[data-style="messenger"] .message > .content > .perview > .description, .cu.chat[data-style="messenger"] .message > .content > .perview > .domain {
   padding-left: .4em;
   line-height: 1.22em;
 }
 
-cu-chat[data-style="messenger"] message > .content > .perview > .domain {
+.cu.chat[data-style="messenger"] .message > .content > .perview > .domain {
   color: rgba(0, 0, 0, 0.4);
 }
 
-cu-chat[data-style="messenger"] message.only > .content > img, cu-chat[data-style="messenger"] message.only > .content iframe, cu-chat[data-style="messenger"] message.only > .content video {
+.cu.chat[data-style="messenger"] .message.only > .content > img, .cu.chat[data-style="messenger"] .message.only > .content iframe, .cu.chat[data-style="messenger"] .message.only > .content video {
   border-radius: 1.219em;
 }
 
-cu-chat[data-style="messenger"] message.right > .avatar {
+.cu.chat[data-style="messenger"] .message.right > .avatar {
   display: none;
 }
 
-cu-chat[data-style="messenger"] message.right > .content > .author {
+.cu.chat[data-style="messenger"] .message.right > .content > .author {
   display: none;
 }
 
-cu-chat[data-style="messenger"] message.right > .content > .text {
+.cu.chat[data-style="messenger"] .message.right > .content > .text {
   margin: 0 0 0 auto;
   color: #FFF;
   background: #0084ff;
 }
 
-cu-chat[data-style="messenger"] message.right > .content > .text a {
+.cu.chat[data-style="messenger"] .message.right > .content > .text a {
   color: #FFF;
 }
 
-cu-chat[data-style="messenger"] message-group message {
+.cu.chat[data-style="messenger"] .message-group .message {
   margin-top: 0.2em;
 }
 
-cu-chat[data-style="messenger"] message-group message:nth-child(n+2) > .avatar {
+.cu.chat[data-style="messenger"] .message-group .message:nth-child(n+2) > .avatar {
   opacity: 0;
 }
 
-cu-chat[data-style="messenger"] message-group message:nth-child(n+2) > .content > .author {
+.cu.chat[data-style="messenger"] .message-group .message:nth-child(n+2) > .content > .author {
   display: none;
 }
 
-cu-chat[data-style="messenger"] message-group message > .content > .text, cu-chat[data-style="messenger"] message-group message > .content > img, cu-chat[data-style="messenger"] message-group message > .content > iframe, cu-chat[data-style="messenger"] message-group message > .content > video, cu-chat[data-style="messenger"] message-group message > .content > .perview {
+.cu.chat[data-style="messenger"] .message-group .message > .content > .text, .cu.chat[data-style="messenger"] .message-group .message > .content > img, .cu.chat[data-style="messenger"] .message-group .message > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message > .content > video, .cu.chat[data-style="messenger"] .message-group .message > .content > .perview {
   border-radius: 0.25em 1.219em 1.219em 0.25em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+.cu.chat[data-style="messenger"] .message-group .message:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
   border-radius: 1.219em  1.219em 1.219em 0.25em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+.cu.chat[data-style="messenger"] .message-group .message:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
   border-radius: 0.25em  1.219em 1.219em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.img:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.img:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.img:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.img:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.iframe:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.iframe:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.iframe:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.iframe:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.video:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.video:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.video:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.video:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.perview:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.perview:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.perview:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.perview:first-child > .content > .perview {
+.cu.chat[data-style="messenger"] .message-group .message.img:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.img:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.img:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.img:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.iframe:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.iframe:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.iframe:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.iframe:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.video:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.video:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.video:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.video:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.perview:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.perview:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.perview:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.perview:first-child > .content > .perview {
   border-radius: 1.219em 1.219em 1.219em 0.25em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.img:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.img:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.img:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.img:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.iframe:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.iframe:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.iframe:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.iframe:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.video:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.video:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.video:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.video:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.perview:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.perview:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.perview:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.perview:last-child > .content > .perview {
+.cu.chat[data-style="messenger"] .message-group .message.img:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.img:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.img:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.img:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.iframe:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.iframe:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.iframe:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.iframe:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.video:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.video:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.video:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.video:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.perview:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.perview:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.perview:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.perview:last-child > .content > .perview {
   border-radius: 0.25em  1.219em 1.219em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.right > .content > .text, cu-chat[data-style="messenger"] message-group message.right > .content > img, cu-chat[data-style="messenger"] message-group message.right > .content > iframe, cu-chat[data-style="messenger"] message-group message.right > .content > video {
+.cu.chat[data-style="messenger"] .message-group .message.right > .content > .text, .cu.chat[data-style="messenger"] .message-group .message.right > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right > .content > video {
   border-radius: 1.219em 0.25em 0.25em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.right:nth-child(n+2) > .avatar {
+.cu.chat[data-style="messenger"] .message-group .message.right:nth-child(n+2) > .avatar {
   opacity: 0;
 }
 
-cu-chat[data-style="messenger"] message-group message.right:nth-child(n+2) > .content > .author {
+.cu.chat[data-style="messenger"] .message-group .message.right:nth-child(n+2) > .content > .author {
   display: none;
 }
 
-cu-chat[data-style="messenger"] message-group message.right:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+.cu.chat[data-style="messenger"] .message-group .message.right:first-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
   border-radius: 1.219em 1.219em 0.25em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.right:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
+.cu.chat[data-style="messenger"] .message-group .message.right:last-child:not(.img):not(.iframe):not(.video):not(.perview) > .content > .text {
   border-radius: 1.219em 0.25em 1.219em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.right.img:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.img:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.img:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.img:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.iframe:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.iframe:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.iframe:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.iframe:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.video:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.video:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.video:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.video:first-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.perview:first-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.perview:first-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.perview:first-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.perview:first-child > .content > .perview {
+.cu.chat[data-style="messenger"] .message-group .message.right.img:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.img:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.img:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.img:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.video:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.video:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.video:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.video:first-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.perview:first-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.perview:first-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.perview:first-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.perview:first-child > .content > .perview {
   border-radius: 1.219em 1.219em 0.25em 1.219em !important;
 }
 
-cu-chat[data-style="messenger"] message-group message.right.img:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.img:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.img:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.img:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.iframe:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.iframe:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.iframe:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.iframe:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.video:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.video:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.video:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.video:last-child > .content > .perview, cu-chat[data-style="messenger"] message-group message.right.perview:last-child > .content > img, cu-chat[data-style="messenger"] message-group message.right.perview:last-child > .content > iframe, cu-chat[data-style="messenger"] message-group message.right.perview:last-child > .content > video, cu-chat[data-style="messenger"] message-group message.right.perview:last-child > .content > .perview {
+.cu.chat[data-style="messenger"] .message-group .message.right.img:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.img:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.img:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.img:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.iframe:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.video:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.video:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.video:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.video:last-child > .content > .perview, .cu.chat[data-style="messenger"] .message-group .message.right.perview:last-child > .content > img, .cu.chat[data-style="messenger"] .message-group .message.right.perview:last-child > .content > iframe, .cu.chat[data-style="messenger"] .message-group .message.right.perview:last-child > .content > video, .cu.chat[data-style="messenger"] .message-group .message.right.perview:last-child > .content > .perview {
   border-radius: 1.219em 0.25em 1.219em 1.219em !important;
 }
 
 /*  RWD  */
 @media (max-width: 768px) {
-  cu-chat[data-style="messenger"] message > .content > .text, cu-chat[data-style="messenger"] message > .content > .perview > img {
+  .cu.chat[data-style="messenger"] .message > .content > .text, .cu.chat[data-style="messenger"] .message > .content > .perview > img {
     max-width: 80vw;
   }
 }
