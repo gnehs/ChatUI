@@ -1,182 +1,185 @@
-
 <html>
-  <head>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet"/>
-    <link href="../css/ChatUI.css" rel="stylesheet"/>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css" rel="stylesheet" />
+    <link href="../css/ChatUI.css" rel="stylesheet" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Test Page</title>
-  </head>
-  <body>
-    <chat class="cu" data-style="messenger">
-      <!-- 讀取器-->
-      <loading class="active"></loading>
-      <!-- 分隔線-->
-      <divider>2018年3月3日 17:16</divider>
-      <!-- 左側短文字訊息-->
-      <message class="text">
-        <div class="avatar" data-initial="熊"></div>
-        <div class="content">
-          <div class="author">熊貓貓</div>
-          <div class="text">
-            <p>這是三小</p>
-          </div>
-          <div class="meta">
-            <div class="item">13:20</div>
-          </div>
-        </div>
-      </message>
-      <!-- 右側短文字訊息-->
-      <message class="text right read">
-        <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-        <div class="content">
-          <div class="author">熊貓貓</div>
-          <div class="text">
-            <p>這是關東煮喔 ❤️</p>
-          </div>
-          <div class="meta">
-            <div class="item">13:20</div>
-          </div>
-        </div>
-      </message>
-      <!-- 左側回覆文字訊息-->
-      <message class="text">
-        <div class="avatar"><img src="https://i.imgur.com/MTDS9BN.png"/></div>
-        <div class="content">
-          <div class="author">可ㄞ狗狗</div>
-          <div class="reply">
-            <div class="author">熊貓貓</div>
+</head>
+
+<body>
+    <cu-chat data-style="messenger">
+        <!-- 讀取器-->
+        <loading class="active"></loading>
+        <!-- 分隔線-->
+        <divider>2018年3月3日 17:16</divider>
+        <!-- 左側短文字訊息-->
+        <message class="text">
+            <div class="avatar" data-initial="熊"></div>
             <div class="content">
-              <div class="text">這是三小</div>
+                <div class="author">熊貓貓</div>
+                <div class="text">
+                    <p>這是三小</p>
+                </div>
+                <div class="meta">
+                    <div class="item">13:20</div>
+                </div>
             </div>
-          </div>
-          <div class="text">
-            <p>這是偶去美國拍的照片</p>
-            <p>這是第二行</p>
-            <p>然後始春還是延其月</p>
-          </div>
-          <div class="meta">
-            <div class="item">13:23</div>
-          </div>
-        </div>
-      </message>
-      <!-- 左側長文字訊息-->
-      <message class="text">
-        <div class="avatar"><img src="https://i.imgur.com/ncjaFUd.png"/></div>
-        <div class="content">
-          <div class="author">大懶貓</div>
-          <div class="reply">
-            <div class="author">可ㄞ狗狗</div>
-            <div class="content">
-              <div class="text">這是偶去美國拍的照片 這是第二行...</div>
-            </div>
-          </div>
-          <div class="text">
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="meta">
-            <div class="item">13:23</div>
-          </div>
-        </div>
-      </message>
-      <!-- 分隔線-->
-      <divider>2018年5月11日 17:16</divider>
-      <!-- 訊息群組-->
-      <message-group>
-        <!-- 左側文字訊息-->
-        <message class="img">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content">
-            <div class="author">熊貓貓</div><img src="https://i.imgur.com/VJJ0zYN.gif"/>
-            <div class="text"> 
-              <p>別擔心，孩子。</p>
-              <p>當你跟我一樣有了工作，你會錯過每個夏天。</p>
-            </div>
-            <div class="meta">
-              <div class="item">15:30</div>
-            </div>
-          </div>
-        </message>
-        <!-- 只發一個影片-->
-        <message class="video only">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content">
-            <video src="https://html5demos.com/assets/dizzy.mp4" controls="controls"></video>
-            <div class="meta">
-              <div class="item">15:38</div>
-            </div>
-          </div>
-        </message>
-        <!-- 連結預覽-->
-        <message class="text perview">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content">
-            <div class="author">熊貓貓</div>
-            <div class="text"><a href="https://gnehs.net/">https://gnehs.net/</a></div>
-            <div class="perview"><img src="https://avatars0.githubusercontent.com/u/16719720"/>
-              <div class="title">棒棒勝</div>
-              <div class="description">住在某鬼島ㄉ高中生</div>
-              <div class="domain">gnehs.net</div>
-            </div>
-            <div class="meta">
-              <div class="item">16:05</div>
-            </div>
-          </div>
-        </message>
-      </message-group>
-      <!-- 嵌入影片-->
-      <message class="iframe">
-        <div class="avatar"><img src="https://i.imgur.com/nMMGqle.png"/></div>
-        <div class="content">
-          <div class="author">丹尼斯</div><iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-          <div class="text">這是偶演ㄉ動畫</div>
-          <div class="meta">
-            <div class="item">15:38</div>
-          </div>
-        </div>
-      </message>
-      <!-- 訊息群組-->
-      <message-group>
-        <!-- 只發一張圖-->
-        <message class="img only right read">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content"><img src="https://i.imgur.com/kJiZpmg.png"/>
-            <div class="meta">
-              <div class="item">15:42</div>
-            </div>
-          </div>
         </message>
         <!-- 右側短文字訊息-->
-        <message class="text right">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content">
-            <div class="author">熊貓貓</div>
-            <div class="text">
-              <p>會考倒數</p>
-              <p>距離會考還剩下 6 天喔</p>
+        <message class="text right read">
+            <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+            <div class="content">
+                <div class="author">熊貓貓</div>
+                <div class="text">
+                    <p>這是關東煮喔 ❤️</p>
+                </div>
+                <div class="meta">
+                    <div class="item">13:20</div>
+                </div>
             </div>
-            <div class="meta">
-              <div class="item">16:02</div>
-            </div>
-          </div>
         </message>
-        <!-- 連結預覽-->
-        <message class="text right perview">
-          <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png"/></div>
-          <div class="content">
-            <div class="author">熊貓貓</div>
-            <div class="text"><a href="https://gnehs.net/">https://gnehs.net/</a></div>
-            <div class="perview"><img src="https://avatars0.githubusercontent.com/u/16719720"/>
-              <div class="title">棒棒勝</div>
-              <div class="description">住在某鬼島ㄉ高中生</div>
-              <div class="domain">gnehs.net</div>
+        <!-- 左側回覆文字訊息-->
+        <message class="text">
+            <div class="avatar"><img src="https://i.imgur.com/MTDS9BN.png" /></div>
+            <div class="content">
+                <div class="author">可ㄞ狗狗</div>
+                <div class="reply">
+                    <div class="author">熊貓貓</div>
+                    <div class="content">
+                        <div class="text">這是三小</div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>這是偶去美國拍的照片</p>
+                    <p>這是第二行</p>
+                    <p>然後始春還是延其月</p>
+                </div>
+                <div class="meta">
+                    <div class="item">13:23</div>
+                </div>
             </div>
-            <div class="meta">
-              <div class="item">16:05</div>
-            </div>
-          </div>
         </message>
-      </message-group>
-    </chat>
-  </body>
+        <!-- 左側長文字訊息-->
+        <message class="text">
+            <div class="avatar"><img src="https://i.imgur.com/ncjaFUd.png" /></div>
+            <div class="content">
+                <div class="author">大懶貓</div>
+                <div class="reply">
+                    <div class="author">可ㄞ狗狗</div>
+                    <div class="content">
+                        <div class="text">這是偶去美國拍的照片 這是第二行...</div>
+                    </div>
+                </div>
+                <div class="text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="meta">
+                    <div class="item">13:23</div>
+                </div>
+            </div>
+        </message>
+        <!-- 分隔線-->
+        <divider>2018年5月11日 17:16</divider>
+        <!-- 訊息群組-->
+        <message-group>
+            <!-- 左側文字訊息-->
+            <message class="img">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content">
+                    <div class="author">熊貓貓</div><img src="https://i.imgur.com/VJJ0zYN.gif" />
+                    <div class="text">
+                        <p>別擔心，孩子。</p>
+                        <p>當你跟我一樣有了工作，你會錯過每個夏天。</p>
+                    </div>
+                    <div class="meta">
+                        <div class="item">15:30</div>
+                    </div>
+                </div>
+            </message>
+            <!-- 只發一個影片-->
+            <message class="video only">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content">
+                    <video src="https://html5demos.com/assets/dizzy.mp4" controls="controls"></video>
+                    <div class="meta">
+                        <div class="item">15:38</div>
+                    </div>
+                </div>
+            </message>
+            <!-- 連結預覽-->
+            <message class="text perview">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content">
+                    <div class="author">熊貓貓</div>
+                    <div class="text"><a href="https://gnehs.net/">https://gnehs.net/</a></div>
+                    <div class="perview"><img src="https://avatars0.githubusercontent.com/u/16719720" />
+                        <div class="title">棒棒勝</div>
+                        <div class="description">住在某鬼島ㄉ高中生</div>
+                        <div class="domain">gnehs.net</div>
+                    </div>
+                    <div class="meta">
+                        <div class="item">16:05</div>
+                    </div>
+                </div>
+            </message>
+        </message-group>
+        <!-- 嵌入影片-->
+        <message class="iframe">
+            <div class="avatar"><img src="https://i.imgur.com/nMMGqle.png" /></div>
+            <div class="content">
+                <div class="author">丹尼斯</div><iframe src="https://www.youtube.com/embed/yvU7OkeJCPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="text">這是偶演ㄉ動畫</div>
+                <div class="meta">
+                    <div class="item">15:38</div>
+                </div>
+            </div>
+        </message>
+        <!-- 訊息群組-->
+        <message-group>
+            <!-- 只發一張圖-->
+            <message class="img only right read">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content"><img src="https://i.imgur.com/kJiZpmg.png" />
+                    <div class="meta">
+                        <div class="item">15:42</div>
+                    </div>
+                </div>
+            </message>
+            <!-- 右側短文字訊息-->
+            <message class="text right">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content">
+                    <div class="author">熊貓貓</div>
+                    <div class="text">
+                        <p>會考倒數</p>
+                        <p>距離會考還剩下 6 天喔</p>
+                    </div>
+                    <div class="meta">
+                        <div class="item">16:02</div>
+                    </div>
+                </div>
+            </message>
+            <!-- 連結預覽-->
+            <message class="text right perview">
+                <div class="avatar"><img src="https://i.imgur.com/6oTWGHZ.png" /></div>
+                <div class="content">
+                    <div class="author">熊貓貓</div>
+                    <div class="text"><a href="https://gnehs.net/">https://gnehs.net/</a></div>
+                    <div class="perview"><img src="https://avatars0.githubusercontent.com/u/16719720" />
+                        <div class="title">棒棒勝</div>
+                        <div class="description">住在某鬼島ㄉ高中生</div>
+                        <div class="domain">gnehs.net</div>
+                    </div>
+                    <div class="meta">
+                        <div class="item">16:05</div>
+                    </div>
+                </div>
+            </message>
+        </message-group>
+        </chat>
+</body>
+
 </html>
