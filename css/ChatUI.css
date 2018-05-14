@@ -361,6 +361,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .reply {
+  margin: 0 0.750em 0.313em 0.750em;
   border-left: 0.125em solid #5dc452;
 }
 
