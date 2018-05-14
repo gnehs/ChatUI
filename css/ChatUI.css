@@ -502,6 +502,7 @@
 
 .cu.chat[data-style="messenger"] .message-group .message:nth-child(n+2) > .avatar {
   opacity: 0;
+  margin-top: 0;
 }
 
 .cu.chat[data-style="messenger"] .message-group .message:nth-child(n+2) > .content > .author {
