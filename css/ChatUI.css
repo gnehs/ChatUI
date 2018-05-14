@@ -270,7 +270,14 @@
 .cu.chat[data-style="telegram"] .message > .content > .text {
   line-height: 1.12em;
   padding-left: 0.750em;
-  padding-right: 3.250em;
+  padding-right: 0.750em;
+}
+
+.cu.chat[data-style="telegram"] .message > .content > .text > *:last-child:after {
+  content: '';
+  width: 3em;
+  height: 1em;
+  display: inline-block;
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .text a {
@@ -345,12 +352,12 @@
   display: none;
 }
 
-.cu.chat[data-style="telegram"] .message.right > .content > .text {
-  padding-right: 4.5em;
-}
-
 .cu.chat[data-style="telegram"] .message.right > .content > .meta > .item {
   color: #78c67f;
+}
+
+.cu.chat[data-style="telegram"] .message.right > .content > .text > *:last-child:after {
+  width: 3.5em;
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .reply {

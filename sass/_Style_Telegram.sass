@@ -61,7 +61,12 @@
             >.text
                 line-height: 1.12em
                 padding-left: 0.750em
-                padding-right: 3.250em
+                padding-right: 0.750em
+                >*:last-child:after
+                    content: ''
+                    width: 3em
+                    height: 1em
+                    display: inline-block
                 a
                     color: rgb(23,144,211)
                     text-decoration: none
@@ -106,11 +111,12 @@
                 background-color: #effdde
                 >.author
                     display: none
-                >.text
-                    padding-right: 4.5em
                 >.meta
                     &>.item
                         color: #78c67f
+                
+                >.text>*:last-child:after
+                        width: 3.5em
                 >.reply
                     border-left: 0.125em solid rgb(93,196,82)
                     &>.author
