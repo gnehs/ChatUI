@@ -357,7 +357,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .text > *:last-child:after {
-  width: 3.5em;
+  width: 3.75em;
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .reply {
