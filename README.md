@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://earlyspringcommitee.github.io/ChatUI/logo/ChatUI.svg" width="400px">
+  <img src="https://earlyspringcommitee.github.io/ChatUI/logo/ChatUI_withText.svg" width="400px">
 </p>
 <br>
 
