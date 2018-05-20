@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FBB03B;}
+	.st1{fill:#FFFFFF;}
+	.st2{font-family:'ArialMT';}
+	.st3{font-size:107.0754px;}
+</style>
+<g>
+	<path class="st0" d="M349.6,351.8H163.4C92.2,351.8,34,293.6,34,222.4l0,0C34,151.2,92.2,93,163.4,93h186.1
+		C420.8,93,479,151.2,479,222.4l0,0C479,293.6,420.8,351.8,349.6,351.8z"/>
+</g>
+<g>
+	<path class="st0" d="M236.2,412.4l159.7-69.3c3.7-1.6,4.7-6.3,2.1-9.4L299,222c-3-3.4-8.6-2.3-10.1,2l-60.7,181
+		C226.6,409.9,231.5,414.4,236.2,412.4z"/>
+</g>
+<text transform="matrix(1 0 0 1 89.8745 269.2324)" class="st1 st2 st3">ChatUI</text>
+</svg>
