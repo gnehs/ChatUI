@@ -12,7 +12,8 @@
 
 # ChatUI
 擁有許多對話氣泡，讓你輕鬆建立一間聊天室的前端 CSS 框架
+an easy way to create chat room with css
 # Links
-[文件](https://earlyspringcommitee.github.io/ChatUIDoc/)
+[文件 / Docs](https://earlyspringcommitee.github.io/ChatUIDoc/)
 
 [Telegram Demo](https://earlyspringcommitee.github.io/ChatUI/test/testTele.html)
