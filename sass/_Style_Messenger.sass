@@ -35,9 +35,9 @@
             >img+.text,>iframe+.text,>video+.text
                 margin-top: 0.2em
                 border-top-left-radius: 0.25em
-            &.perview
+            &.preview
                 background: #000
-            >.perview
+            >.preview
                 margin-top: 0.2em
                 border: 1px solid #eee
                 border-radius: 1.219em
@@ -82,24 +82,24 @@
                     &>.author
                         display: none
             >.content
-                >.text,>img,>iframe,>video,>.perview
+                >.text,>img,>iframe,>video,>.preview
                     border-radius: 0.25em 1.219em 1.219em 0.25em !important
             // todo n-1 last-child
-            &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
+            &:first-child:not(.img):not(.iframe):not(.video):not(.preview)
                 &>.content
                     &>.text
                         border-radius: 1.219em  1.219em 1.219em 0.25em !important
-            &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
+            &:last-child:not(.img):not(.iframe):not(.video):not(.preview)
                 &>.content
                     &>.text
                         border-radius: 0.25em  1.219em 1.219em 1.219em !important
-            &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
+            &.img:first-child,&.iframe:first-child,&.video:first-child,&.preview:first-child
                 &>.content
-                    &>img,&>iframe,&>video,&>.perview
+                    &>img,&>iframe,&>video,&>.preview
                         border-radius: 1.219em  1.219em 1.219em 0.25em!important
-            &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
+            &.img:last-child,&.iframe:last-child,&.video:last-child,&.preview:last-child
                 &>.content
-                    &>img,&>iframe,&>video,&>.perview
+                    &>img,&>iframe,&>video,&>.preview
                         border-radius: 0.25em  1.219em 1.219em 1.219em !important
             
             &.right
@@ -112,21 +112,21 @@
                     >.content
                         >.author
                             display: none
-                &:first-child:not(.img):not(.iframe):not(.video):not(.perview)
+                &:first-child:not(.img):not(.iframe):not(.video):not(.preview)
                     >.content
                         >.text
                             border-radius: 1.219em 1.219em 0.25em 1.219em !important
-                &:last-child:not(.img):not(.iframe):not(.video):not(.perview)
+                &:last-child:not(.img):not(.iframe):not(.video):not(.preview)
                     >.content
                         >.text
                             border-radius: 1.219em 0.25em 1.219em 1.219em !important
-                &.img:first-child,&.iframe:first-child,&.video:first-child,&.perview:first-child
+                &.img:first-child,&.iframe:first-child,&.video:first-child,&.preview:first-child
                     >.content
-                        >img,>iframe,>video,>.perview
+                        >img,>iframe,>video,>.preview
                             border-radius: 1.219em 1.219em 0.25em 1.219em !important
-                &.img:last-child,&.iframe:last-child,&.video:last-child,&.perview:last-child
+                &.img:last-child,&.iframe:last-child,&.video:last-child,&.preview:last-child
                     >.content
-                        >img,>iframe,>video,>.perview
+                        >img,>iframe,>video,>.preview
                             border-radius: 1.219em 0.25em 1.219em 1.219em !important
 
 /*  RWD  */
@@ -134,5 +134,5 @@
     .cu.chat[data-style="messenger"]
         .message
             >.content
-                >.text,>.perview>img
+                >.text,>.preview>img
                     max-width: 80vw
