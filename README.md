@@ -17,5 +17,5 @@ Create your own chat room with ease through ChatUI, a powerful CSS Library!
 # Links
 [文件 / Docs](https://earlyspringcommitee.github.io/ChatUIDoc/)
 
-[Telegram Demo](https://earlyspringcommitee.github.io/ChatUI/test/testTele.html)
+[Telegram Demo](https://earlyspringcommitee.github.io/ChatUI/test/testTele.html)  
 [Messenger Demo](https://earlyspringcommitee.github.io/ChatUI/test/testMsgr.html)
