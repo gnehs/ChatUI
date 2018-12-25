@@ -93,6 +93,12 @@
                 line-height: 1.22em
                 >.author
                     color: var(--message-border-color)
+            >*:nth-last-child(2).reply
+                >.content>.text:after
+                    content: ''
+                    width: 3em
+                    height: 1em
+                    display: inline-block
             >*+.reply
                 margin: 0.625em 0.750em 0.313em 0.750em
             >.preview

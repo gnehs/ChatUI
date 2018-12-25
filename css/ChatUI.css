@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .cu.chat {
+  --avatar-size: 2.5em;
   font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif;
   width: 100%;
   display: block;
@@ -75,6 +76,8 @@
 .cu.chat .message > .avatar {
   position: relative;
   margin: 0 0.313em 0 0;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
 }
 
 .cu.chat .message > .avatar[data-initial]::before {
@@ -87,7 +90,10 @@
 }
 
 .cu.chat .message > .avatar > img {
-  width: 2.5em;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  -o-object-fit: cover;
+  object-fit: cover;
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
@@ -130,8 +136,8 @@
   .cu.chat .message img video, .cu.chat .message img iframe, .cu.chat .message video video, .cu.chat .message video iframe, .cu.chat .message iframe video, .cu.chat .message iframe iframe {
     min-height: 200px;
   }
-  .cu.chat .message > .avatar > img {
-    width: 30px;
+  .cu.chat .message > .avatar {
+    --avatar-size: 30px;
   }
 }
 
@@ -304,6 +310,13 @@
 
 .cu.chat[data-style="telegram"] .message > .content > .reply > .author {
   color: var(--message-border-color);
+}
+
+.cu.chat[data-style="telegram"] .message > .content > *:nth-last-child(2).reply > .content > .text:after {
+  content: '';
+  width: 3em;
+  height: 1em;
+  display: inline-block;
 }
 
 .cu.chat[data-style="telegram"] .message > .content > * + .reply {

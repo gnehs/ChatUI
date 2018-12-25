@@ -1,4 +1,5 @@
 .cu.chat
+    --avatar-size: 2.5em
     font-family: "SF Pro TC","SF Pro Text","SF Pro Icons","PingFang TC","Helvetica Neue","Helvetica","Arial","Microsoft JhengHei",wf_SegoeUI,"Segoe UI",Segoe,"Segoe WP",Tahoma,Verdana,Ubuntu,"Bitstream Vera Sans","DejaVu Sans",Tahoma,微軟正黑體,"LiHei Pro","WenQuanYi Micro Hei","Droid Sans Fallback","AR PL UMing TW",Roboto,"Helvetica Neue","Hiragino Maru Gothic ProN",メイリオ,"ヒラギノ丸ゴ ProN W4",Meiryo,"Droid Sans",sans-serif
     width: 100%
     display: block
@@ -45,6 +46,8 @@
         &>.avatar
             position: relative
             margin: 0 0.313em 0 0
+            width: var(--avatar-size)
+            height: var(--avatar-size)
             &[data-initial]::before
                 display: block
                 color: #fff;
@@ -53,7 +56,9 @@
                 text-align: center
                 background: #5755d9
             &>img
-                width: 2.5em
+                width: var(--avatar-size)
+                height: var(--avatar-size)
+                object-fit: cover
                 transition: 0.1s
         &>.content
             width: auto
@@ -81,5 +86,4 @@
                 video,iframe
                     min-height: 200px
             >.avatar
-                >img
-                    width: 30px
+                --avatar-size: 30px
