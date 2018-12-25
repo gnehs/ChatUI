@@ -306,6 +306,10 @@
   color: var(--message-border-color);
 }
 
+.cu.chat[data-style="telegram"] .message > .content > * + .reply {
+  margin: 0.625em 0.750em 0.313em 0.750em;
+}
+
 .cu.chat[data-style="telegram"] .message > .content > .preview {
   border-left: 0.125em solid var(--message-border-color);
   padding-left: 0.625em;
@@ -325,10 +329,6 @@
 .cu.chat[data-style="telegram"] .message > .content > .preview > img {
   width: 100%;
   margin-top: .2em;
-}
-
-.cu.chat[data-style="telegram"] .message > .content > .author + .reply {
-  margin: 0.625em 0.750em 0.313em 0.750em;
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .meta {
