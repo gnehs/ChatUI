@@ -264,9 +264,9 @@
 
 .cu.chat[data-style="telegram"] .message > .avatar[data-initial]::before {
   border-radius: 100%;
-  width: 2.5em;
-  height: 2.5em;
-  line-height: 2.5em;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  line-height: var(--avatar-size);
 }
 
 .cu.chat[data-style="telegram"] .message > .avatar > img {
