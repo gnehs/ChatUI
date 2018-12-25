@@ -64,13 +64,19 @@
   margin: 0 0.5em 0 auto;
 }
 
-.cu.chat .message > .content img, .cu.chat .message > .content video, .cu.chat .message > .content iframe {
+.cu.chat .message:not(.sticker) > .content img, .cu.chat .message:not(.sticker) > .content video, .cu.chat .message:not(.sticker) > .content iframe {
   width: 450px;
   vertical-align: top;
 }
 
-.cu.chat .message > .content video, .cu.chat .message > .content iframe {
+.cu.chat .message:not(.sticker) > .content video, .cu.chat .message:not(.sticker) > .content iframe {
   min-height: 250px;
+}
+
+.cu.chat .message.sticker > .content > img {
+  width: auto;
+  max-width: 300px;
+  border-radius: 0.313em;
 }
 
 .cu.chat .message > .avatar {
@@ -180,6 +186,7 @@
 }
 
 .cu.chat[data-style="telegram"] {
+  --message-only-meta-bg: rgba(0, 0, 0, 0.3);
   --message-only-meta-color: #FFF;
   --message-bg: #fff;
   --message-link-color: #1790d3;
@@ -396,6 +403,34 @@
   color: var(--right-message-border-color);
 }
 
+.cu.chat[data-style="telegram"] .message.sticker > .content {
+  background: transparent;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  --message-border-color: #ffffff;
+  --right-message-border-color: #ffffff;
+}
+
+.cu.chat[data-style="telegram"] .message.sticker > .content .reply {
+  padding: 0.313em 0.750em 0.313em 0.750em;
+  border-left: none;
+  border-radius: 0.5em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: var(--message-only-meta-color);
+  background-color: var(--message-only-meta-bg);
+}
+
+.cu.chat[data-style="telegram"] .message.sticker > .content .reply .author, .cu.chat[data-style="telegram"] .message.sticker > .content .reply .content {
+  border-left: 0.125em solid var(--message-border-color);
+  padding-left: 0.313em;
+}
+
+.cu.chat[data-style="telegram"] .message.sticker > .content .reply .content > .text:after {
+  display: none;
+}
+
 .cu.chat[data-style="telegram"] .message-group .message:nth-child(n+2) > .avatar {
   opacity: 0;
 }
@@ -417,17 +452,16 @@
 
 .cu.chat[data-style="messenger"] .message > .avatar {
   margin-top: 1em;
+  --avatar-size: 1.750em;
 }
 
 .cu.chat[data-style="messenger"] .message > .avatar[data-initial]::before {
   border-radius: 100%;
-  width: 1.750em;
-  height: 1.750em;
-  line-height: 1.750em;
+  width: var(--avatar-size);
+  line-height: var(--avatar-size);
 }
 
 .cu.chat[data-style="messenger"] .message > .avatar > img {
-  width: 1.750em;
   border-radius: 100%;
 }
 

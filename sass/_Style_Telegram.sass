@@ -1,7 +1,7 @@
 .cu.chat[data-style="telegram"]
     // css var
-    --message-only-meta-bg:rgba(0, 0, 0, 0.3)
-    --message-only-meta-color:#FFF
+    --message-only-meta-bg: rgba(0, 0, 0, 0.3)
+    --message-only-meta-color: #FFF
     --message-bg: #fff
     --message-link-color: rgb(23,144,211)
     --message-meta-color: #d1d1d1
@@ -146,6 +146,24 @@
                     border-left: 0.125em solid var(--right-message-border-color)
                     >.title
                         color: var(--right-message-border-color)
+        // 貼圖訊息
+        &.sticker>.content
+            background: transparent
+            box-shadow: none
+            --message-border-color: #ffffff
+            --right-message-border-color: #ffffff
+            .reply
+                padding: 0.313em 0.750em 0.313em 0.750em
+                border-left: none
+                border-radius: 0.5em
+                width: max-content
+                color: var(--message-only-meta-color) 
+                background-color: var(--message-only-meta-bg)
+                .author,.content
+                    border-left: 0.125em solid var(--message-border-color)
+                    padding-left: 0.313em
+                .content>.text:after
+                    display: none
     .message-group
         .message
             &:nth-child(n+2)

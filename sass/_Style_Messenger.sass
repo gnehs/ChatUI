@@ -8,13 +8,13 @@
         margin-top: 1em
         >.avatar
             margin-top: 1em
+            --avatar-size: 1.750em
             &[data-initial]::before
                 border-radius: 100%
-                width: 1.750em
-                height: 1.750em
-                line-height: 1.750em
+                width: var(--avatar-size)
+                height:var(--avatar-size)
+                line-height: var(--avatar-size)
             >img
-                width: 1.750em
                 border-radius: 100%
         >.content
             >.reply,>.meta

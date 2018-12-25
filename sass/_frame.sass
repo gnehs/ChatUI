@@ -36,13 +36,17 @@
         &.right
             flex-direction: row-reverse
             margin: 0 0.5em 0 auto
-        
-        &>.content
+            
+        &:not(.sticker)>.content
             img,video,iframe
                 width: 450px
                 vertical-align: top
             video,iframe
                 min-height: 250px
+        &.sticker>.content>img
+            width: auto
+            max-width: 300px
+            border-radius: 0.313em
         &>.avatar
             position: relative
             margin: 0 0.313em 0 0
@@ -74,6 +78,7 @@
                 .item
                     display: inline-block
                     color: #a0accf
+
 /*  RWD  */
 @media(max-width: 768px)
     .cu.chat
