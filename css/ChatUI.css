@@ -10,12 +10,10 @@
   clear: both;
   position: relative;
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   line-height: 1;
@@ -43,10 +41,8 @@
 
 .cu.chat .message {
   display: -webkit-box;
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   width: -webkit-max-content;
@@ -62,7 +58,6 @@
 .cu.chat .message.right {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
-  -webkit-flex-direction: row-reverse;
   -ms-flex-direction: row-reverse;
   flex-direction: row-reverse;
   margin: 0 0.5em 0 auto;
@@ -104,11 +99,9 @@
   border-radius: 0.313em;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
   position: relative;
@@ -180,6 +173,19 @@
   content: "\e903";
 }
 
+.cu.chat[data-style="telegram"] {
+  --message-only-meta-color: #FFF;
+  --message-bg: #fff;
+  --message-link-color: #1790d3;
+  --message-meta-color: #d1d1d1;
+  --message-border-color: #37a1de;
+  --message-shadow-color: rgba(0, 0, 0, 0.15);
+  --right-message-bg: #effdde;
+  --right-message-color: #000;
+  --right-message-meta-color: #78c67f;
+  --right-message-border-color: #5dc452;
+}
+
 .cu.chat[data-style="telegram"].sticky > divider {
   top: .4em;
   position: -webkit-sticky;
@@ -209,7 +215,7 @@
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--message-only-meta-bg);
   margin: 0.313em;
   padding: 0.188em 0.375em;
   border-radius: .5em;
@@ -220,7 +226,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.only > .content > .meta > .item.item {
-  color: #FFF;
+  color: var(--message-only-meta-color);
 }
 
 .cu.chat[data-style="telegram"] .message.only > .content:hover > .meta {
@@ -256,10 +262,10 @@
 
 .cu.chat[data-style="telegram"] .message > .content {
   padding-top: 0.625em;
-  background-color: #fff;
+  background-color: var(--message-bg);
   border-radius: 0.5em;
-  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0px 1px 1px var(--message-shadow-color);
+  box-shadow: 0px 1px 1px var(--message-shadow-color);
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .author {
@@ -281,7 +287,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .text a {
-  color: #1790d3;
+  color: var(--message-link-color);
   text-decoration: none;
 }
 
@@ -290,25 +296,25 @@
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .reply {
-  border-left: 0.125em solid #37a1de;
+  border-left: 0.125em solid var(--message-border-color);
   padding-left: 0.625em;
   margin: 0 0.750em 0.313em 0.750em;
   line-height: 1.22em;
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .reply > .author {
-  color: #37a1de;
+  color: var(--message-border-color);
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .preview {
-  border-left: 0.125em solid #37a1de;
+  border-left: 0.125em solid var(--message-border-color);
   padding-left: 0.625em;
   margin: 0.313em 0.750em 0.313em 0.750em;
   line-height: 1.22em;
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .preview > .title {
-  color: #37a1de;
+  color: var(--message-border-color);
   font-weight: bold;
 }
 
@@ -332,7 +338,7 @@
 
 .cu.chat[data-style="telegram"] .message > .content > .meta > .item {
   font-size: .9em;
-  color: #d1d1d1;
+  color: var(--message-meta-color);
 }
 
 .cu.chat[data-style="telegram"] .message > .content > .preview + .meta {
@@ -344,7 +350,8 @@
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content {
-  background-color: #effdde;
+  background-color: var(--right-message-bg);
+  color: var(--right-message-color);
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .author {
@@ -352,7 +359,7 @@
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .meta > .item {
-  color: #78c67f;
+  color: var(--right-message-meta-color);
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .text > *:last-child:after {
@@ -361,19 +368,19 @@
 
 .cu.chat[data-style="telegram"] .message.right > .content > .reply {
   margin: 0 0.750em 0.313em 0.750em;
-  border-left: 0.125em solid #5dc452;
+  border-left: 0.125em solid var(--right-message-border-color);
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .reply > .author {
-  color: #5dc452;
+  color: var(--right-message-border-color);
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .preview {
-  border-left: 0.125em solid #5dc452;
+  border-left: 0.125em solid var(--right-message-border-color);
 }
 
 .cu.chat[data-style="telegram"] .message.right > .content > .preview > .title {
-  color: #5dc452;
+  color: var(--right-message-border-color);
 }
 
 .cu.chat[data-style="telegram"] .message-group .message:nth-child(n+2) > .avatar {
